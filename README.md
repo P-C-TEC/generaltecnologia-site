@@ -11,6 +11,8 @@ via `vercel deploy` direto da CLI, sem repositório Git associado.
 - `index.html` — home institucional da General Tecnologia (empresa, produtos, contato).
 - `gtrestaurante/index.html` — página de vendas do produto GTRestaurante (antigo `index.html`
   da raiz, movido para cá quando o site passou a ser institucional).
+- `gtrestaurante/termos.html` — Termos de Uso estáticos do produto.
+- `gtrestaurante/privacidade.html` — Política de Privacidade estática do produto.
 - `vercel.json` — `cleanUrls`/`trailingSlash` para servir `/gtrestaurante` sem barra final.
 
 Ambas as páginas são estáticas (Tailwind via CDN), reconstruídas a partir do conteúdo em
