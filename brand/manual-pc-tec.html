@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Manual de Identidade Visual — P&C Tec</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #16213E; margin:0; }
+  .page { page-break-after: always; min-height: 253mm; position: relative; }
+  .page:last-child { page-break-after: auto; }
+  .cover { background: linear-gradient(160deg,#0B1F3A 0%,#0A1730 60%,#071021 100%); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:253mm; margin:-22mm -18mm; padding:22mm 18mm; }
+  .cover .kicker { letter-spacing:4px; font-size:12px; color:#8FC3FF; font-weight:700; margin-bottom:18px; }
+  .cover h1 { font-size:40px; margin:0 0 10px; font-weight:800; }
+  .cover .sub { font-size:16px; color:#B9C7DB; max-width:420px; }
+  .cover .footer-meta { position:absolute; bottom:26mm; font-size:11px; color:#7488A6; }
+  h2.section-title { font-size:13px; letter-spacing:3px; color:#1C6DD0; font-weight:800; text-transform:uppercase; margin:0 0 4px; }
+  h1.page-title { font-size:28px; font-weight:800; color:#0B1F3A; margin:0 0 22px; border-bottom:3px solid #1C6DD0; padding-bottom:14px; }
+  p { line-height:1.65; font-size:14px; color:#334155; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .card { border:1px solid #E2E8F0; border-radius:10px; padding:18px; }
+  .swatch { border-radius:10px; overflow:hidden; border:1px solid #E2E8F0; }
+  .swatch .fill { height:70px; }
+  .swatch .label { padding:10px 12px; font-size:11.5px; background:#fff; }
+  .swatch .label b { display:block; font-size:13px; margin-bottom:2px; }
+  .logo-box { border:1px dashed #CBD5E1; border-radius:12px; display:flex; align-items:center; justify-content:center; padding:30px; }
+  .logo-box.dark { background:#0B1F3A; border-color:#1C6DD0; }
+  .dont { border:2px solid #DC2626; border-radius:12px; padding:14px; text-align:center; position:relative; }
+  .dont::after { content:"✕"; position:absolute; top:6px; right:10px; color:#DC2626; font-weight:900; }
+  .toc-item { display:flex; justify-content:space-between; border-bottom:1px dotted #CBD5E1; padding:10px 0; font-size:14px; }
+  .toc-item b { color:#0B1F3A; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  table th { text-align:left; background:#0B1F3A; color:#fff; padding:8px 10px; }
+  table td { padding:8px 10px; border-bottom:1px solid #E2E8F0; }
+  .tag { display:inline-block; background:#EFF6FF; color:#1C6DD0; font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:10px; }
+  .biz-card { width:280px; height:160px; border-radius:12px; background:linear-gradient(135deg,#0B1F3A,#123363); color:#fff; padding:20px; position:relative; box-shadow:0 8px 24px rgba(0,0,0,.15); }
+  .biz-card .name { font-weight:800; font-size:16px; margin-top:10px;}
+  .biz-card .role { font-size:11px; color:#8FC3FF; }
+  .biz-card .contact { position:absolute; bottom:16px; left:20px; font-size:9.5px; color:#B9C7DB; line-height:1.5; }
+  footer.pagefoot { position:absolute; bottom:0; left:0; right:0; font-size:9.5px; color:#94A3B8; border-top:1px solid #E2E8F0; padding-top:6px; display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+
+  <!-- COVER -->
+  <div class="page cover">
+    <div class="kicker">MANUAL DE IDENTIDADE VISUAL</div>
+    <img src="../brand/pc-tec-mark-white.svg" style="width:110px;height:110px;margin-bottom:26px;" />
+    <h1>P&amp;C Tec</h1>
+    <div class="sub">Tecnologia e Integração — a marca de produtos digitais da Perdigão &amp; Carneiro Tecnologias LTDA.</div>
+    <div class="footer-meta">Versão 1.0 — Agosto de 2026 · Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36</div>
+  </div>
+
+  <!-- TOC -->
+  <div class="page">
+    <h2 class="section-title">Índice</h2>
+    <h1 class="page-title">Sumário</h1>
+    <div class="toc-item"><span>1. Apresentação da marca</span><b>03</b></div>
+    <div class="toc-item"><span>2. Arquitetura de marca (empresa e produtos)</span><b>04</b></div>
+    <div class="toc-item"><span>3. Logotipo — construção, versões e área de proteção</span><b>05</b></div>
+    <div class="toc-item"><span>4. Tamanho mínimo e usos incorretos</span><b>06</b></div>
+    <div class="toc-item"><span>5. Paleta de cores</span><b>07</b></div>
+    <div class="toc-item"><span>6. Tipografia</span><b>08</b></div>
+    <div class="toc-item"><span>7. Tom de voz</span><b>09</b></div>
+    <div class="toc-item"><span>8. Aplicações — cartão, papelaria, digital</span><b>10</b></div>
+    <div class="toc-item"><span>9. Checklist rápido de uso</span><b>11</b></div>
+  </div>
+
+  <!-- 1. APRESENTAÇÃO -->
+  <div class="page">
+    <h2 class="section-title">01 · Apresentação</h2>
+    <h1 class="page-title">Quem somos</h1>
+    <p><b>P&amp;C Tec</b> é a marca comercial da <b>Perdigão &amp; Carneiro Tecnologias LTDA</b>
+       (CNPJ 68.508.547/0001-36), sediada em Itabuna – BA. Somos uma empresa de tecnologia que
+       desenvolve produtos de software próprios, com inteligência artificial aplicada de forma
+       prática — não decorativa.</p>
+    <p>Nosso primeiro produto é o <b>GTRestaurante</b>, uma plataforma completa de gestão para
+       restaurantes. Ele é o primeiro item de um portfólio que pretende crescer: a P&amp;C Tec é
+       a "casa-mãe" por trás de todos os produtos atuais e futuros.</p>
+    <div class="grid3" style="margin-top:26px;">
+      <div class="card"><b>Missão</b><p>Criar software que resolve problemas operacionais reais,
+        com tecnologia própria e IA aplicada ao dia a dia de quem usa.</p></div>
+      <div class="card"><b>Visão</b><p>Ser reconhecida como uma casa de produtos digitais que
+        constrói ferramentas essenciais para múltiplos setores, começando pela gestão de
+        restaurantes.</p></div>
+      <div class="card"><b>Valores</b><p>Praticidade sobre exagero. Dados reais sobre promessas
+        vazias. Proteção do know-how. Clareza na comunicação.</p></div>
+    </div>
+  </div>
+
+  <!-- 2. ARQUITETURA DE MARCA -->
+  <div class="page">
+    <h2 class="section-title">02 · Arquitetura de marca</h2>
+    <h1 class="page-title">Empresa e produtos</h1>
+    <p>A P&amp;C Tec segue uma arquitetura de <b>marca-mãe + produtos endossados</b>: a empresa
+       assina institucionalmente (site, contratos, imprensa, documentos legais), enquanto cada
+       produto tem sua própria identidade visual voltada ao cliente final.</p>
+    <div class="grid2" style="margin-top:20px;">
+      <div class="card">
+        <span class="tag">MARCA-MÃE</span>
+        <p><b>P&amp;C Tec</b><br>Paleta navy/azul · uso institucional: site corporativo
+        (generaltecnologia.com), papelaria, contratos, comunicação com investidores/parceiros,
+        imprensa, documentos jurídicos (ex.: registro no INPI).</p>
+      </div>
+      <div class="card">
+        <span class="tag">PRODUTO</span>
+        <p><b>GTRestaurante</b><br>Paleta laranja/escura própria (ver manual específico) · uso
+        voltado ao cliente final: app, landing page de vendas, materiais de marketing do produto.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;"><b>Regra prática:</b> a marca P&amp;C Tec aparece sempre que o
+      contexto é institucional/corporativo. A marca do produto aparece sempre que o contexto é
+      voltado ao usuário final daquele produto específico. Rodapés de páginas de produto devem
+      indicar "um produto P&amp;C Tec" para reforçar a arquitetura sem competir com a marca do
+      produto.</p>
+  </div>
+
+  <!-- 3. LOGOTIPO -->
+  <div class="page">
+    <h2 class="section-title">03 · Logotipo</h2>
+    <h1 class="page-title">Construção e versões</h1>
+    <p>O símbolo é um octógono (forma facetada, não um círculo perfeito — remete a precisão e
+       tecnologia) com o monograma <b>"P&amp;C"</b> e dois conectores nas laterais, representando
+       integração. O lockup completo combina o símbolo com o nome <b>"P&amp;C Tec"</b> e a
+       assinatura <b>"Tecnologia e Integração"</b>.</p>
+    <div class="grid3" style="margin-top:20px;">
+      <div class="logo-box"><img src="../brand/pc-tec-mark.svg" style="width:90px;height:90px;" /></div>
+      <div class="logo-box dark"><img src="../brand/pc-tec-mark-white.svg" style="width:90px;height:90px;" /></div>
+      <div class="logo-box" style="grid-column: span 1;"><img src="../brand/pc-tec-lockup.svg" style="width:100%;max-width:230px;" /></div>
+    </div>
+    <p style="margin-top:10px; font-size:12px; color:#64748B;">Da esquerda para a direita: símbolo
+      colorido (fundo claro), símbolo monocromático branco (fundo escuro/navy), lockup horizontal
+      completo (símbolo + nome + assinatura).</p>
+    <div style="margin-top:24px;">
+      <b style="font-size:13px;">Área de proteção</b>
+      <p>Mantenha ao redor do símbolo um espaço livre equivalente à largura de um dos conectores
+        laterais (≈ 1/10 da largura do símbolo). Nenhum elemento gráfico, texto ou borda de outro
+        elemento deve invadir essa área.</p>
+    </div>
+  </div>
+
+  <!-- 4. TAMANHO MÍNIMO / DONT'S -->
+  <div class="page">
+    <h2 class="section-title">04 · Uso correto</h2>
+    <h1 class="page-title">Tamanho mínimo e usos incorretos</h1>
+    <p><b>Tamanho mínimo:</b> o símbolo isolado não deve ser reproduzido com menos de 24px
+      (digital) ou 8mm (impresso) de altura. O lockup completo não deve ter menos de 120px
+      (digital) ou 30mm (impresso) de largura, para manter a legibilidade da assinatura.</p>
+    <div class="grid4" style="margin-top:22px;">
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Não distorcer</b><span style="font-size:11px;color:#64748B;">Nunca esticar ou achatar o símbolo fora da proporção 1:1</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Não trocar cores</b><span style="font-size:11px;color:#64748B;">Usar apenas as versões navy/azul, branca ou preta oficiais</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Não girar</b><span style="font-size:11px;color:#64748B;">O símbolo sempre reto, sem rotação ou espelhamento</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Não recriar</b><span style="font-size:11px;color:#64748B;">Não redesenhar o monograma "P&amp;C" com outra tipografia</span></div>
+    </div>
+    <p style="margin-top:22px;">Sempre use os arquivos oficiais (SVG/PNG) do repositório de marca —
+      nunca capturas de tela ou recriações manuais.</p>
+  </div>
+
+  <!-- 5. PALETA -->
+  <div class="page">
+    <h2 class="section-title">05 · Cor</h2>
+    <h1 class="page-title">Paleta de cores</h1>
+    <p>Paleta inspirada em tecnologia e confiança: azul profundo (navy) como base institucional,
+      azul vibrante como cor de ação/destaque, e cinza neutro para textos secundários.</p>
+    <div class="grid4" style="margin-top:20px;">
+      <div class="swatch"><div class="fill" style="background:#0B1F3A;"></div><div class="label"><b>Navy (primária)</b>#0B1F3A<br>RGB 11,31,58 · CMYK 81,47,0,77</div></div>
+      <div class="swatch"><div class="fill" style="background:#1C6DD0;"></div><div class="label"><b>Azul P&amp;C</b>#1C6DD0<br>RGB 28,109,208 · CMYK 87,48,0,18</div></div>
+      <div class="swatch"><div class="fill" style="background:#2E8FFF;"></div><div class="label"><b>Azul ação</b>#2E8FFF<br>RGB 46,143,255 · CMYK 82,44,0,0</div></div>
+      <div class="swatch"><div class="fill" style="background:#8FC3FF;"></div><div class="label"><b>Azul claro</b>#8FC3FF<br>RGB 143,195,255 · CMYK 44,23,0,0</div></div>
+      <div class="swatch"><div class="fill" style="background:#64748B;"></div><div class="label"><b>Cinza neutro</b>#64748B<br>RGB 100,116,139 · CMYK 28,17,0,45</div></div>
+      <div class="swatch"><div class="fill" style="background:#FFFFFF;border-bottom:1px solid #eee;"></div><div class="label"><b>Branco</b>#FFFFFF<br>RGB 255,255,255 · CMYK 0,0,0,0</div></div>
+      <div class="swatch"><div class="fill" style="background:#04080F;"></div><div class="label"><b>Fundo escuro</b>#04080F<br>RGB 4,8,15 · CMYK 73,47,0,94</div></div>
+      <div class="swatch"><div class="fill" style="background:#0F172A;"></div><div class="label"><b>Fundo escuro alt.</b>#0F172A<br>RGB 15,23,42 · CMYK 64,45,0,84</div></div>
+    </div>
+    <p style="margin-top:20px;"><b>Proporção recomendada:</b> 60% navy/fundo escuro, 30% branco/cinza
+      neutro (texto e espaços), 10% azul de ação (botões, links, destaques).</p>
+  </div>
+
+  <!-- 6. TIPOGRAFIA -->
+  <div class="page">
+    <h2 class="section-title">06 · Tipografia</h2>
+    <h1 class="page-title">Fonte e hierarquia</h1>
+    <p>A fonte oficial da marca é a <b>Inter</b> (Google Fonts, gratuita, ampla disponibilidade de
+      pesos). Ela é usada tanto no site institucional quanto no GTRestaurante, garantindo
+      consistência entre a empresa e seus produtos.</p>
+    <div style="margin-top:22px;">
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:800;font-size:34px;color:#0B1F3A;">Inter Black / Extrabold — Títulos</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:600;font-size:20px;color:#0B1F3A;margin-top:10px;">Inter SemiBold — Subtítulos e destaques</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:14px;color:#334155;margin-top:10px;">Inter Regular — Texto corrido e parágrafos de apoio</div>
+    </div>
+    <table style="margin-top:26px;">
+      <tr><th>Uso</th><th>Peso</th><th>Tamanho (web)</th></tr>
+      <tr><td>Título principal (H1)</td><td>800–900 (Black/Extrabold)</td><td>40–72px</td></tr>
+      <tr><td>Título de seção (H2)</td><td>700–800 (Bold/Extrabold)</td><td>28–34px</td></tr>
+      <tr><td>Destaque / assinatura</td><td>600–700, letter-spacing +2.5px, caixa alta</td><td>13–15px</td></tr>
+      <tr><td>Corpo de texto</td><td>400–500 (Regular/Medium)</td><td>14–16px</td></tr>
+      <tr><td>Legenda / rodapé</td><td>400–500</td><td>11–12px</td></tr>
+    </table>
+  </div>
+
+  <!-- 7. TOM DE VOZ -->
+  <div class="page">
+    <h2 class="section-title">07 · Comunicação</h2>
+    <h1 class="page-title">Tom de voz</h1>
+    <div class="grid2">
+      <div class="card">
+        <b>Como somos</b>
+        <p>Diretos, técnicos sem serem herméticos, confiáveis. Falamos de tecnologia com
+          propriedade, mas sempre traduzindo o benefício prático para quem lê.</p>
+      </div>
+      <div class="card">
+        <b>Como não somos</b>
+        <p>Não usamos jargão vazio de "startup", não prometemos "revolução" sem entregar
+          especificidade, não usamos tom informal em excesso em canais institucionais.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;"><b>Institucional (P&amp;C Tec):</b> "Desenvolvemos produtos de
+      software próprios, com inteligência artificial aplicada de forma prática para resolver
+      problemas operacionais reais."</p>
+    <p><b>Produto (ex.: GTRestaurante):</b> tom mais direto e comercial, focado em resultado
+      imediato para o cliente — ver manual de marca do produto.</p>
+  </div>
+
+  <!-- 8. APLICAÇÕES -->
+  <div class="page">
+    <h2 class="section-title">08 · Aplicações</h2>
+    <h1 class="page-title">Papelaria e materiais</h1>
+    <div class="grid2" style="align-items:center;">
+      <div>
+        <div class="biz-card">
+          <img src="../brand/pc-tec-mark-white.svg" style="width:34px;height:34px;" />
+          <div class="name">Eigon Perdigão da Silva</div>
+          <div class="role">Sócio-fundador</div>
+          <div class="contact">contato@generaltecnologia.com<br>generaltecnologia.com</div>
+        </div>
+        <p style="font-size:11px;color:#64748B;margin-top:8px;">Cartão de visita — modelo de referência</p>
+      </div>
+      <div class="card">
+        <b>Diretrizes de papelaria</b>
+        <p>Cartão de visita: fundo navy (#0B1F3A) ou branco, símbolo sempre visível, contatos em
+          cinza claro/branco com boa hierarquia. Papel timbrado: símbolo no topo esquerdo,
+          rodapé com razão social e CNPJ em cinza neutro.</p>
+      </div>
+    </div>
+    <div style="margin-top:26px;">
+      <b style="font-size:13px;">Aplicações digitais</b>
+      <p>Favicon: usar apenas o símbolo (pc-tec-mark.svg). Avatares de redes sociais: símbolo
+        centralizado com margem generosa. Assinatura de e-mail: lockup horizontal reduzido
+        (máx. 180px de largura) + dados de contato em cinza.</p>
+    </div>
+  </div>
+
+  <!-- 9. CHECKLIST -->
+  <div class="page">
+    <h2 class="section-title">09 · Checklist</h2>
+    <h1 class="page-title">Antes de publicar, confirme</h1>
+    <table>
+      <tr><th>Item</th><th>Ok?</th></tr>
+      <tr><td>Usei o arquivo oficial do símbolo/lockup (não recriei ou tirei print)</td><td>☐</td></tr>
+      <tr><td>Respeitei a área de proteção mínima ao redor do símbolo</td><td>☐</td></tr>
+      <tr><td>Usei as cores oficiais da paleta (não variações aproximadas)</td><td>☐</td></tr>
+      <tr><td>Usei Inter (ou fallback do sistema) como tipografia</td><td>☐</td></tr>
+      <tr><td>O contexto é institucional (P&amp;C Tec) e não de um produto específico</td><td>☐</td></tr>
+      <tr><td>O tamanho está acima do mínimo definido neste manual</td><td>☐</td></tr>
+    </table>
+    <p style="margin-top:26px;font-size:11.5px;color:#64748B;">Dúvidas sobre uso da marca:
+      contato@generaltecnologia.com — Perdigão &amp; Carneiro Tecnologias LTDA, CNPJ
+      68.508.547/0001-36, Itabuna – BA.</p>
+  </div>
+
+</body>
+</html>

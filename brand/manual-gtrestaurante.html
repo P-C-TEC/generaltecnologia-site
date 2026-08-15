@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Manual de Identidade Visual — GTRestaurante</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #16213E; margin:0; }
+  .page { page-break-after: always; min-height: 253mm; position: relative; }
+  .page:last-child { page-break-after: auto; }
+  .cover { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.25) 0%, transparent 60%), linear-gradient(180deg,#08111e 0%,#04080f 100%); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:253mm; margin:-22mm -18mm; padding:22mm 18mm; }
+  .cover .kicker { letter-spacing:4px; font-size:12px; color:#FF9A47; font-weight:700; margin-bottom:18px; }
+  .cover h1 { font-size:40px; margin:0 0 10px; font-weight:800; }
+  .cover .sub { font-size:16px; color:#CBD5E1; max-width:440px; }
+  .cover .footer-meta { position:absolute; bottom:26mm; font-size:11px; color:#7488A6; }
+  h2.section-title { font-size:13px; letter-spacing:3px; color:#CC5500; font-weight:800; text-transform:uppercase; margin:0 0 4px; }
+  h1.page-title { font-size:28px; font-weight:800; color:#1a1a1a; margin:0 0 22px; border-bottom:3px solid #FF6B00; padding-bottom:14px; }
+  p { line-height:1.65; font-size:14px; color:#334155; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .grid7 { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; }
+  .card { border:1px solid #E2E8F0; border-radius:10px; padding:18px; }
+  .swatch { border-radius:10px; overflow:hidden; border:1px solid #E2E8F0; }
+  .swatch .fill { height:70px; }
+  .swatch .label { padding:10px 12px; font-size:11.5px; background:#fff; }
+  .swatch .label b { display:block; font-size:13px; margin-bottom:2px; }
+  .mock-card { background:#08111e; border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; color:#fff; }
+  .mock-btn { display:inline-block; background:linear-gradient(135deg,#FF6B00,#FF8A00); color:#fff; font-weight:700; font-size:12px; padding:8px 16px; border-radius:999px; }
+  .module-icon { width:44px;height:44px;border-radius:10px;background:rgba(255,107,0,.15); display:flex;align-items:center;justify-content:center;font-size:20px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  table th { text-align:left; background:#1a1a1a; color:#fff; padding:8px 10px; }
+  table td { padding:8px 10px; border-bottom:1px solid #E2E8F0; }
+  .tag { display:inline-block; background:#FFF1E6; color:#CC5500; font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:10px; }
+  .toc-item { display:flex; justify-content:space-between; border-bottom:1px dotted #CBD5E1; padding:10px 0; font-size:14px; }
+  .toc-item b { color:#1a1a1a; }
+  .dont { border:2px solid #DC2626; border-radius:12px; padding:14px; text-align:center; position:relative; }
+  .dont::after { content:"✕"; position:absolute; top:6px; right:10px; color:#DC2626; font-weight:900; }
+</style>
+</head>
+<body>
+
+  <!-- COVER -->
+  <div class="page cover">
+    <div class="kicker">MANUAL DE IDENTIDADE VISUAL</div>
+    <img src="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" style="width:96px;height:96px;border-radius:20px;margin-bottom:26px;object-fit:cover;" />
+    <h1>GTRestaurante</h1>
+    <div class="sub">Gestão completa para restaurantes, com IA integrada. Um produto P&amp;C Tec.</div>
+    <div class="footer-meta">Versão 1.0 — Agosto de 2026 · Perdigão &amp; Carneiro Tecnologias LTDA</div>
+  </div>
+
+  <!-- TOC -->
+  <div class="page">
+    <h2 class="section-title">Índice</h2>
+    <h1 class="page-title">Sumário</h1>
+    <div class="toc-item"><span>1. Apresentação do produto</span><b>03</b></div>
+    <div class="toc-item"><span>2. Relação com a marca P&amp;C Tec</span><b>04</b></div>
+    <div class="toc-item"><span>3. Logotipo e ícone do app</span><b>05</b></div>
+    <div class="toc-item"><span>4. Paleta de cores</span><b>06</b></div>
+    <div class="toc-item"><span>5. Tipografia</span><b>07</b></div>
+    <div class="toc-item"><span>6. Componentes visuais de UI</span><b>08</b></div>
+    <div class="toc-item"><span>7. Iconografia dos módulos</span><b>09</b></div>
+    <div class="toc-item"><span>8. Tom de voz do produto</span><b>10</b></div>
+    <div class="toc-item"><span>9. Usos incorretos</span><b>11</b></div>
+    <div class="toc-item"><span>10. Checklist rápido de uso</span><b>12</b></div>
+  </div>
+
+  <!-- 1. APRESENTAÇÃO -->
+  <div class="page">
+    <h2 class="section-title">01 · Apresentação</h2>
+    <h1 class="page-title">O que é o GTRestaurante</h1>
+    <p><b>GTRestaurante</b> é uma plataforma SaaS completa de gestão para restaurantes: CMV,
+      checklists operacionais, estoque/insumos, financeiro, equipe, ativos, documentos, eventos
+      e reservas, comercial/delivery e relatórios com IA — com um assistente de inteligência
+      artificial nativo, que responde com dados reais do restaurante do cliente.</p>
+    <div class="grid3" style="margin-top:22px;">
+      <div class="card"><b>Proposta de valor</b><p>Substituir planilhas, papel e WhatsApp por uma
+        plataforma única, com IA aplicada à operação do dia a dia.</p></div>
+      <div class="card"><b>Público</b><p>Donos e gestores de restaurantes, de operações
+        independentes a pequenas redes com múltiplas unidades.</p></div>
+      <div class="card"><b>Diferencial</b><p>13 módulos integrados, sem cobrar por módulo, com IA
+        incluída em todos os planos pagos (inclusive no trial).</p></div>
+    </div>
+  </div>
+
+  <!-- 2. RELAÇÃO COM A MARCA MÃE -->
+  <div class="page">
+    <h2 class="section-title">02 · Arquitetura de marca</h2>
+    <h1 class="page-title">GTRestaurante dentro da P&amp;C Tec</h1>
+    <p>O GTRestaurante é o primeiro produto da <b>P&amp;C Tec</b> (Perdigão &amp; Carneiro
+      Tecnologias LTDA). Ele possui identidade visual própria — paleta laranja sobre fundo escuro,
+      diferente do navy institucional da P&amp;C Tec — porque fala diretamente com o cliente final
+      (dono/gestor de restaurante), enquanto a P&amp;C Tec fala institucionalmente (site
+      corporativo, imprensa, documentos legais).</p>
+    <div class="card" style="margin-top:16px;">
+      <b>Regra de convivência das marcas</b>
+      <p>Toda página ou material do GTRestaurante deve indicar, de forma discreta (rodapé), que é
+        <i>"um produto P&amp;C Tec"</i>, com link para <b>generaltecnologia.com</b>. A marca do
+        GTRestaurante nunca deve ser subordinada visualmente à P&amp;C Tec dentro do produto — o
+        cliente final se relaciona com o "GTRestaurante", não diretamente com a "P&amp;C Tec".</p>
+    </div>
+  </div>
+
+  <!-- 3. LOGOTIPO -->
+  <div class="page">
+    <h2 class="section-title">03 · Logotipo</h2>
+    <h1 class="page-title">Ícone e uso da marca</h1>
+    <p>O ícone atual (<code>logo-gtr.png</code>) é usado como favicon, ícone de app e selo de marca
+      em toda a experiência — landing page, dashboard, e-mails transacionais.</p>
+    <div class="grid3" style="margin-top:20px;align-items:center;">
+      <div style="text-align:center;">
+        <img src="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" style="width:80px;height:80px;border-radius:16px;object-fit:cover;" />
+        <p style="font-size:11px;color:#64748B;margin-top:8px;">Ícone / avatar (app, favicon)</p>
+      </div>
+      <div class="card" style="grid-column: span 2;">
+        <b>Lockup recomendado</b>
+        <p>Ícone + wordmark "GTRestaurante" em Inter Bold, branco sobre fundo escuro (#08111e) ou
+          navy sobre fundo claro. Manter espaço livre ao redor equivalente a 25% da altura do
+          ícone.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;"><b>Evolução recomendada:</b> considerar substituir o ícone atual
+      (fotográfico) por uma versão vetorial simplificada, para melhor legibilidade em tamanhos
+      pequenos (16–32px) — ver seção de próximos passos ao final do documento.</p>
+  </div>
+
+  <!-- 4. PALETA -->
+  <div class="page">
+    <h2 class="section-title">04 · Cor</h2>
+    <h1 class="page-title">Paleta de cores (extraída do produto)</h1>
+    <p>Paleta oficial já em uso no app e na landing page — fundo escuro profundo com laranja
+      vibrante como cor de ação, remetendo a energia, apetite e urgência operacional.</p>
+    <div class="grid4" style="margin-top:18px;">
+      <div class="swatch"><div class="fill" style="background:#FF6B00;"></div><div class="label"><b>Laranja (brand)</b>#FF6B00<br>RGB 255,107,0</div></div>
+      <div class="swatch"><div class="fill" style="background:#CC5500;"></div><div class="label"><b>Laranja escuro</b>#CC5500<br>RGB 204,85,0</div></div>
+      <div class="swatch"><div class="fill" style="background:#08111E;"></div><div class="label"><b>Fundo principal</b>#08111E<br>RGB 8,17,30</div></div>
+      <div class="swatch"><div class="fill" style="background:#04080F;"></div><div class="label"><b>Fundo profundo</b>#04080F<br>RGB 4,8,15</div></div>
+    </div>
+    <div class="grid4" style="margin-top:14px;">
+      <div class="swatch"><div class="fill" style="background:#94A3B8;"></div><div class="label"><b>Cinza texto secund.</b>#94A3B8<br>RGB 148,163,184</div></div>
+      <div class="swatch"><div class="fill" style="background:#22C55E;"></div><div class="label"><b>Sucesso / válido</b>#22C55E<br>RGB 34,197,94</div></div>
+      <div class="swatch"><div class="fill" style="background:#F59E0B;"></div><div class="label"><b>Alerta / pendente</b>#F59E0B<br>RGB 245,158,11</div></div>
+      <div class="swatch"><div class="fill" style="background:#FFFFFF;border-bottom:1px solid #eee;"></div><div class="label"><b>Branco (texto)</b>#FFFFFF<br>RGB 255,255,255</div></div>
+    </div>
+    <p style="margin-top:18px;"><b>Regra de uso:</b> laranja reservado para CTAs, destaques de IA e
+      indicadores positivos de marca — nunca usar como cor de fundo em grandes áreas (satura
+      visualmente); fundo é sempre escuro (#08111e/#04080f).</p>
+  </div>
+
+  <!-- 5. TIPOGRAFIA -->
+  <div class="page">
+    <h2 class="section-title">05 · Tipografia</h2>
+    <h1 class="page-title">Fonte e hierarquia</h1>
+    <p>Mesma família tipográfica da P&amp;C Tec: <b>Inter</b> — reforça consistência entre empresa
+      e produto sem confundir as marcas (a diferenciação vem da cor e do fundo, não da fonte).</p>
+    <div style="margin-top:22px;">
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:900;font-size:38px;color:#1a1a1a;">Inter Black — Headlines de vendas</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:700;font-size:22px;color:#1a1a1a;margin-top:10px;">Inter Bold — Nomes de módulo e cards</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:14px;color:#334155;margin-top:10px;">Inter Regular — Texto de apoio e descrições</div>
+    </div>
+    <table style="margin-top:26px;">
+      <tr><th>Uso</th><th>Peso</th><th>Tamanho (web)</th></tr>
+      <tr><td>Headline de vendas (H1)</td><td>900 (Black)</td><td>48–72px</td></tr>
+      <tr><td>Título de módulo/card</td><td>700 (Bold)</td><td>16–24px</td></tr>
+      <tr><td>Corpo / descrição</td><td>400 (Regular)</td><td>13–16px</td></tr>
+      <tr><td>Métricas em destaque (dashboard)</td><td>700–800</td><td>18–24px</td></tr>
+      <tr><td>Labels / legendas de UI</td><td>500–600</td><td>10–12px</td></tr>
+    </table>
+  </div>
+
+  <!-- 6. COMPONENTES -->
+  <div class="page">
+    <h2 class="section-title">06 · Interface</h2>
+    <h1 class="page-title">Componentes visuais</h1>
+    <div class="grid2">
+      <div class="mock-card">
+        <p style="color:#94A3B8;font-size:10px;margin:0 0 6px;">CMV do Mês</p>
+        <p style="color:#FF6B00;font-size:22px;font-weight:800;margin:0;">28,4%</p>
+        <p style="color:#22C55E;font-size:10px;margin:6px 0 0;">▼ 2,1% vs mês ant.</p>
+      </div>
+      <div class="mock-card">
+        <p style="font-size:11px;font-weight:700;margin:0 0 8px;">✦ Assistente IA</p>
+        <p style="font-size:11px;color:#CBD5E1;margin:0;">Seu CMV está 2,1% abaixo do mês anterior...</p>
+        <span class="mock-btn" style="margin-top:10px;">Assinar agora</span>
+      </div>
+    </div>
+    <p style="margin-top:20px;">Padrões consistentes em todo o produto: cantos bem arredondados
+      (<code>rounded-2xl</code>, ~16px), cartões com fundo translúcido (<code>bg-white/[0.04]</code>)
+      sobre fundo escuro, bordas sutis (<code>border-white/[0.08]</code>), e destaque de IA sempre
+      com o símbolo <b>✦</b> acompanhado de laranja.</p>
+    <p><b>Botão primário:</b> gradiente laranja (#FF6B00 → #FF8A00), cantos totalmente
+      arredondados (pill), sombra laranja suave. <b>Botão secundário:</b> apenas borda branca
+      translúcida, sem preenchimento.</p>
+  </div>
+
+  <!-- 7. ICONOGRAFIA -->
+  <div class="page">
+    <h2 class="section-title">07 · Iconografia</h2>
+    <h1 class="page-title">Ícones por módulo</h1>
+    <p>Atualmente cada módulo é representado por um emoji dentro de um badge laranja translúcido —
+      solução rápida e universalmente suportada, sem depender de bibliotecas de ícones externas.</p>
+    <div class="grid7" style="margin-top:18px;">
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">📊</div><p style="font-size:10px;margin-top:6px;">Dashboard</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">✅</div><p style="font-size:10px;margin-top:6px;">Checklists</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">📦</div><p style="font-size:10px;margin-top:6px;">Insumos</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">💰</div><p style="font-size:10px;margin-top:6px;">Financeiro</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">👥</div><p style="font-size:10px;margin-top:6px;">Equipe</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">🎉</div><p style="font-size:10px;margin-top:6px;">Eventos</p></div>
+      <div style="text-align:center;"><div class="module-icon" style="margin:0 auto;">📁</div><p style="font-size:10px;margin-top:6px;">Documentos</p></div>
+    </div>
+    <p style="margin-top:20px;"><b>Recomendação futura:</b> migrar para um set de ícones de linha
+      (ex.: Lucide/Phosphor) na cor laranja/branco, mantendo o badge circular — ganha
+      consistência visual em telas de alta densidade, sem perder a familiaridade atual.</p>
+  </div>
+
+  <!-- 8. TOM DE VOZ -->
+  <div class="page">
+    <h2 class="section-title">08 · Comunicação</h2>
+    <h1 class="page-title">Tom de voz do produto</h1>
+    <div class="grid2">
+      <div class="card"><b>Como falamos</b><p>Direto, orientado a resultado, com números concretos
+        ("CMV em 28,4%", "14 dias grátis, sem cartão"). Fala no "seu restaurante", não em
+        abstrações.</p></div>
+      <div class="card"><b>Como não falamos</b><p>Sem jargão técnico de TI para o usuário final,
+        sem promessas vagas ("transforme seu negócio"), sem excesso de superlativos sem dado que
+        sustente.</p></div>
+    </div>
+    <p style="margin-top:20px;"><b>Exemplo de headline:</b> "Gestão completa para restaurantes.
+      Com IA integrada." — <b>Exemplo de CTA:</b> "Começar teste grátis — 14 dias".</p>
+  </div>
+
+  <!-- 9. DONT'S -->
+  <div class="page">
+    <h2 class="section-title">09 · Uso correto</h2>
+    <h1 class="page-title">Usos incorretos</h1>
+    <div class="grid4" style="margin-top:20px;">
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Sem fundo claro</b><span style="font-size:11px;color:#64748B;">Nunca usar a marca sobre fundo branco/claro sólido</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Sem outra cor de ação</b><span style="font-size:11px;color:#64748B;">CTAs sempre em laranja — nunca azul, verde ou roxo</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Sem ícones genéricos demais</b><span style="font-size:11px;color:#64748B;">Evitar clip-arts fora do estilo emoji/linha definido</span></div>
+      <div class="dont"><b style="display:block;margin-bottom:8px;">Sem misturar com navy da P&amp;C Tec</b><span style="font-size:11px;color:#64748B;">O produto não herda a paleta institucional da marca-mãe</span></div>
+    </div>
+  </div>
+
+  <!-- 10. CHECKLIST -->
+  <div class="page">
+    <h2 class="section-title">10 · Checklist</h2>
+    <h1 class="page-title">Antes de publicar, confirme</h1>
+    <table>
+      <tr><th>Item</th><th>Ok?</th></tr>
+      <tr><td>Fundo escuro (#08111e/#04080f), nunca fundo claro</td><td>☐</td></tr>
+      <tr><td>CTA principal em laranja (#FF6B00), formato pill</td><td>☐</td></tr>
+      <tr><td>Tipografia Inter, pesos conforme hierarquia definida</td><td>☐</td></tr>
+      <tr><td>Rodapé indica "um produto P&amp;C Tec" com link institucional</td><td>☐</td></tr>
+      <tr><td>Ícones de módulo seguem o padrão emoji + badge circular</td><td>☐</td></tr>
+      <tr><td>Nenhuma cor de ação fora do laranja definido nesta paleta</td><td>☐</td></tr>
+    </table>
+    <p style="margin-top:26px;font-size:11.5px;color:#64748B;">Dúvidas sobre uso da marca do
+      produto: gtrestaurante@generaltecnologia.com — um produto P&amp;C Tec (Perdigão &amp;
+      Carneiro Tecnologias LTDA).</p>
+  </div>
+
+</body>
+</html>
