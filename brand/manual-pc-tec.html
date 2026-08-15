@@ -40,6 +40,32 @@
   .biz-card .role { font-size:11px; color:#8FC3FF; }
   .biz-card .contact { position:absolute; bottom:16px; left:20px; font-size:9.5px; color:#B9C7DB; line-height:1.5; }
   footer.pagefoot { position:absolute; bottom:0; left:0; right:0; font-size:9.5px; color:#94A3B8; border-top:1px solid #E2E8F0; padding-top:6px; display:flex; justify-content:space-between; }
+  .mock-frame { border:1px solid #E2E8F0; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,.06); }
+  .browser-bar { background:#E9EDF2; padding:8px 12px; display:flex; align-items:center; gap:6px; }
+  .browser-bar .dot { width:8px; height:8px; border-radius:50%; background:#CBD5E1; }
+  .browser-bar .urlbar { flex:1; background:#fff; border-radius:6px; padding:4px 10px; font-size:9.5px; color:#64748B; margin-left:8px; display:flex; align-items:center; gap:6px; }
+  .site-nav { background:rgba(4,8,15,.95); padding:10px 18px; display:flex; align-items:center; justify-content:space-between; }
+  .site-hero { background:linear-gradient(180deg,#08111e,#04080f); padding:26px 18px; text-align:center; }
+  .site-footer { background:#04080f; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,.06); }
+  .avatar-circle { width:110px; height:110px; border-radius:50%; background:linear-gradient(160deg,#0B1F3A,#123363); display:flex; align-items:center; justify-content:center; }
+  .social-banner { border-radius:10px; background:linear-gradient(120deg,#0B1F3A,#123363,#0B1F3A); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative; overflow:hidden; }
+  .social-banner::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 80% 20%, rgba(46,143,255,.35), transparent 60%); }
+  .social-post { width:220px; height:220px; border-radius:14px; background:linear-gradient(160deg,#0B1F3A,#04080f); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; text-align:center; padding:16px; }
+  .biz-card.front { display:flex; align-items:center; justify-content:center; }
+  .biz-card.back { background:#fff; color:#0B1F3A; border:1px solid #E2E8F0; box-shadow:0 4px 16px rgba(0,0,0,.05); }
+  .biz-card.back .name { color:#0B1F3A; }
+  .badge { width:220px; border-radius:16px; overflow:hidden; border:1px solid #E2E8F0; box-shadow:0 8px 24px rgba(0,0,0,.1); background:#fff; }
+  .badge .band { background:linear-gradient(120deg,#0B1F3A,#123363); padding:14px; text-align:center; }
+  .badge .photo { width:76px; height:76px; border-radius:50%; background:#E2E8F0; margin:16px auto 8px; border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+  .badge .body { text-align:center; padding:0 14px 16px; }
+  .badge .strip { height:10px; background:repeating-linear-gradient(90deg,#0B1F3A 0 4px,#fff 4px 6px); margin-top:10px; }
+  .letterhead { width:280px; aspect-ratio:1/1.414; border:1px solid #E2E8F0; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:18px 16px; position:relative; background:#fff; }
+  .letterhead .lh-line { height:6px; background:#EEF2F7; border-radius:3px; margin-bottom:8px; }
+  .letterhead .lh-footer { position:absolute; bottom:14px; left:16px; right:16px; border-top:1px solid #E2E8F0; padding-top:8px; font-size:7px; color:#94A3B8; text-align:center; }
+  .email-sig { display:flex; gap:16px; align-items:stretch; border:1px solid #E2E8F0; border-radius:10px; padding:16px; background:#fff; }
+  .email-sig .bar { width:4px; border-radius:4px; background:linear-gradient(180deg,#2E8FFF,#0B1F3A); }
+  .ad-banner { border-radius:10px; background:linear-gradient(120deg,#0B1F3A,#123363); color:#fff; display:flex; align-items:center; justify-content:space-between; padding:18px 22px; position:relative; overflow:hidden; }
+  .ad-banner::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 90% 10%, rgba(46,143,255,.3), transparent 55%); }
 </style>
 </head>
 <body>
@@ -50,7 +76,7 @@
     <img src="pc-tec-logo-white.png" style="width:220px;height:auto;margin-bottom:26px;" />
     <h1>P&amp;C Tec</h1>
     <div class="sub">Tecnologia e Integração — a marca de produtos digitais da Perdigão &amp; Carneiro Tecnologias LTDA.</div>
-    <div class="footer-meta">Versão 1.0 — Agosto de 2026 · Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36</div>
+    <div class="footer-meta">Versão 2.0 — Agosto de 2026 · Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36</div>
   </div>
 
   <!-- TOC -->
@@ -64,8 +90,14 @@
     <div class="toc-item"><span>5. Paleta de cores</span><b>07</b></div>
     <div class="toc-item"><span>6. Tipografia</span><b>08</b></div>
     <div class="toc-item"><span>7. Tom de voz</span><b>09</b></div>
-    <div class="toc-item"><span>8. Aplicações — cartão, papelaria, digital</span><b>10</b></div>
-    <div class="toc-item"><span>9. Checklist rápido de uso</span><b>11</b></div>
+    <div class="toc-item"><span>8. Aplicação — Website (header, rodapé, favicon)</span><b>10</b></div>
+    <div class="toc-item"><span>9. Aplicação — Redes sociais (perfil, capa, posts)</span><b>11</b></div>
+    <div class="toc-item"><span>10. Aplicação — Cartão de visita (frente e verso)</span><b>12</b></div>
+    <div class="toc-item"><span>11. Aplicação — Crachá de identificação</span><b>13</b></div>
+    <div class="toc-item"><span>12. Aplicação — Papel timbrado</span><b>14</b></div>
+    <div class="toc-item"><span>13. Aplicação — Assinatura de e-mail</span><b>15</b></div>
+    <div class="toc-item"><span>14. Aplicação — Banners e apresentações</span><b>16</b></div>
+    <div class="toc-item"><span>15. Checklist rápido de uso</span><b>17</b></div>
   </div>
 
   <!-- 1. APRESENTAÇÃO -->
@@ -223,47 +255,217 @@
       imediato para o cliente — ver manual de marca do produto.</p>
   </div>
 
-  <!-- 8. APLICAÇÕES -->
+  <!-- 8. APLICAÇÃO — WEBSITE -->
   <div class="page">
-    <h2 class="section-title">08 · Aplicações</h2>
-    <h1 class="page-title">Papelaria e materiais</h1>
-    <div class="grid2" style="align-items:center;">
-      <div>
-        <div class="biz-card">
-          <img src="pc-tec-logo-white.png" style="width:64px;height:auto;" />
-          <div class="name">Eigon Perdigão da Silva</div>
-          <div class="role">Sócio-fundador</div>
-          <div class="contact">contato@generaltecnologia.com<br>generaltecnologia.com</div>
-        </div>
-        <p style="font-size:11px;color:#64748B;margin-top:8px;">Cartão de visita — modelo de referência</p>
+    <h2 class="section-title">08 · Aplicação</h2>
+    <h1 class="page-title">Website</h1>
+    <p>No site institucional, a marca aparece na aba do navegador (favicon), no menu de navegação
+      e no rodapé — sempre a versão branca sobre fundo escuro, seguida da palavra "Tec".</p>
+    <div class="mock-frame" style="margin-top:20px;">
+      <div class="browser-bar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="urlbar"><img src="pc-tec-logo.png" style="width:14px;height:auto;" /> generaltecnologia.com</div>
       </div>
-      <div class="card">
-        <b>Diretrizes de papelaria</b>
-        <p>Cartão de visita: fundo navy (#0B1F3A) ou branco, símbolo sempre visível, contatos em
-          cinza claro/branco com boa hierarquia. Papel timbrado: símbolo no topo esquerdo,
-          rodapé com razão social e CNPJ em cinza neutro.</p>
+      <div class="site-nav">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <img src="pc-tec-logo-white.png" style="width:52px;height:auto;" />
+          <span style="color:#fff;font-weight:800;font-size:13px;">Tec</span>
+        </div>
+        <div style="display:flex;gap:14px;">
+          <span style="color:#94A3B8;font-size:10px;">Produtos</span>
+          <span style="color:#94A3B8;font-size:10px;">Sobre</span>
+          <span style="color:#94A3B8;font-size:10px;">Contato</span>
+        </div>
+      </div>
+      <div class="site-hero">
+        <div style="color:#fff;font-size:18px;font-weight:800;">Criamos software que resolve problemas reais.</div>
+        <div style="color:#94A3B8;font-size:10px;margin-top:8px;">A P&amp;C Tec desenvolve produtos próprios, com IA integrada desde o primeiro dia.</div>
+      </div>
+      <div class="site-footer">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <img src="pc-tec-logo-white.png" style="width:34px;height:auto;" />
+          <span style="color:#fff;font-size:9px;font-weight:700;">Tec</span>
+        </div>
+        <span style="color:#475569;font-size:8px;">© 2026 Perdigão &amp; Carneiro Tecnologias LTDA</span>
       </div>
     </div>
-    <div style="margin-top:26px;">
-      <b style="font-size:13px;">Aplicações digitais</b>
-      <p>Favicon: usar o arquivo pc-tec-logo.png centralizado. Avatares de redes sociais: monograma
-        centralizado com margem generosa sobre fundo navy. Assinatura de e-mail: monograma reduzido
-        (máx. 120px de largura) + "Tec" ao lado + dados de contato em cinza.</p>
+    <p style="margin-top:16px;"><b>Favicon:</b> arquivo <code>pc-tec-logo.png</code> quadrado,
+      renderizado pequeno (16–32px) — testado e legível mesmo nesse tamanho por ser vazado/simples.
+      <b>Header:</b> logo branca + "Tec" em texto, altura entre 28–36px. <b>Rodapé:</b> mesma
+      combinação, reduzida (22–28px de altura), sempre acompanhada da razão social e CNPJ.</p>
+  </div>
+
+  <!-- 9. APLICAÇÃO — REDES SOCIAIS -->
+  <div class="page">
+    <h2 class="section-title">09 · Aplicação</h2>
+    <h1 class="page-title">Redes sociais</h1>
+    <div class="grid2" style="align-items:center;">
+      <div style="text-align:center;">
+        <div class="avatar-circle" style="margin:0 auto;"><img src="pc-tec-logo-white.png" style="width:64px;height:auto;" /></div>
+        <p style="font-size:11px;color:#64748B;margin-top:10px;">Foto de perfil (LinkedIn, Instagram, X) — fundo navy, símbolo centralizado</p>
+      </div>
+      <div class="social-post" style="margin:0 auto;">
+        <img src="pc-tec-logo-white.png" style="width:100px;height:auto;position:relative;z-index:1;" />
+        <div style="font-size:9px;letter-spacing:2px;color:#8FC3FF;margin-top:12px;position:relative;z-index:1;">TECNOLOGIA E INTEGRAÇÃO</div>
+        <p style="font-size:10px;color:#64748B;margin-top:14px;">Post/carrossel quadrado (Instagram/LinkedIn) — fundo com gradiente navy</p>
+      </div>
+    </div>
+    <div class="social-banner" style="height:110px;margin-top:22px;">
+      <img src="pc-tec-logo-white.png" style="width:120px;height:auto;position:relative;z-index:1;" />
+      <div style="font-size:9px;letter-spacing:2px;color:#8FC3FF;margin-top:6px;position:relative;z-index:1;">TECNOLOGIA E INTEGRAÇÃO</div>
+    </div>
+    <p style="font-size:11px;color:#64748B;margin-top:8px;">Capa/banner (LinkedIn 1584×396, X 1500×500) — logo centralizada, fundo navy com brilho azul sutil no canto</p>
+    <p style="margin-top:16px;"><b>Regra:</b> em avatares circulares, nunca deixar o monograma
+      encostado na borda — usar zoom que deixe ~20% de margem. Em capas/banners, manter o
+      logotipo sempre centralizado horizontalmente (o corte de exibição varia entre dispositivos).</p>
+  </div>
+
+  <!-- 10. APLICAÇÃO — CARTÃO DE VISITA -->
+  <div class="page">
+    <h2 class="section-title">10 · Aplicação</h2>
+    <h1 class="page-title">Cartão de visita</h1>
+    <div class="grid2" style="align-items:start;">
+      <div style="text-align:center;">
+        <div class="biz-card front">
+          <img src="pc-tec-logo-white.png" style="width:150px;height:auto;" />
+        </div>
+        <p style="font-size:11px;color:#64748B;margin-top:8px;">Frente — apenas o logotipo, centralizado, fundo navy</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="biz-card back">
+          <img src="pc-tec-logo.png" style="width:70px;height:auto;" />
+          <div class="name">Eigon Perdigão da Silva</div>
+          <div class="role" style="color:#1C6DD0;">Sócio-fundador</div>
+          <div class="contact" style="color:#475569;">contato@generaltecnologia.com<br>generaltecnologia.com</div>
+        </div>
+        <p style="font-size:11px;color:#64748B;margin-top:8px;">Verso — dados de contato, fundo branco</p>
+      </div>
+    </div>
+    <p style="margin-top:22px;"><b>Especificações de impressão:</b> formato 9×5cm, papel couché
+      300g fosco, verniz localizado (spot UV) opcional no monograma da frente. Cores em CMYK
+      conforme tabela da seção 5 — não usar RGB para arquivos de gráfica.</p>
+  </div>
+
+  <!-- 11. APLICAÇÃO — CRACHÁ -->
+  <div class="page">
+    <h2 class="section-title">11 · Aplicação</h2>
+    <h1 class="page-title">Crachá de identificação</h1>
+    <div class="grid2" style="align-items:center;">
+      <div style="text-align:center;">
+        <div class="badge" style="margin:0 auto;">
+          <div class="band"><img src="pc-tec-logo-white.png" style="width:90px;height:auto;" /></div>
+          <div class="photo"></div>
+          <div class="body">
+            <div style="font-weight:800;font-size:13px;color:#0B1F3A;">Eigon Perdigão da Silva</div>
+            <div style="font-size:10px;color:#1C6DD0;margin-top:2px;">Sócio-fundador</div>
+            <div class="strip"></div>
+          </div>
+        </div>
+        <p style="font-size:11px;color:#64748B;margin-top:10px;">Modelo de referência — furo para cordão no topo</p>
+      </div>
+      <div class="card">
+        <b>Diretrizes</b>
+        <p>Faixa superior sempre em navy com a logo branca. Foto do colaborador em recorte circular
+          com borda branca. Nome em Inter Bold, cargo em azul P&amp;C. Faixa inferior (código de
+          barras/QR de acesso, quando aplicável) sempre na base do cartão.</p>
+      </div>
     </div>
   </div>
 
-  <!-- 9. CHECKLIST -->
+  <!-- 12. APLICAÇÃO — PAPEL TIMBRADO -->
   <div class="page">
-    <h2 class="section-title">09 · Checklist</h2>
+    <h2 class="section-title">12 · Aplicação</h2>
+    <h1 class="page-title">Papel timbrado</h1>
+    <div class="grid2" style="align-items:center;">
+      <div style="text-align:center;">
+        <div class="letterhead" style="margin:0 auto;">
+          <img src="pc-tec-logo.png" style="width:90px;height:auto;margin-bottom:18px;" />
+          <div class="lh-line" style="width:70%;"></div>
+          <div class="lh-line" style="width:95%;"></div>
+          <div class="lh-line" style="width:90%;"></div>
+          <div class="lh-line" style="width:60%;"></div>
+          <div class="lh-line" style="width:85%; margin-top:14px;"></div>
+          <div class="lh-line" style="width:95%;"></div>
+          <div class="lh-footer">Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36 · Itabuna – BA · generaltecnologia.com</div>
+        </div>
+        <p style="font-size:11px;color:#64748B;margin-top:10px;">Modelo A4 — logotipo no topo esquerdo, rodapé institucional fixo</p>
+      </div>
+      <div class="card">
+        <b>Diretrizes</b>
+        <p>Margens de 2,5cm em todos os lados. Logotipo colorido, altura de 16mm, alinhado à
+          esquerda no topo. Corpo do texto em Inter Regular, 11pt, cor #334155. Rodapé fixo com
+          razão social, CNPJ, cidade e site, centralizado, em cinza neutro 8pt.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. APLICAÇÃO — ASSINATURA DE E-MAIL -->
+  <div class="page">
+    <h2 class="section-title">13 · Aplicação</h2>
+    <h1 class="page-title">Assinatura de e-mail</h1>
+    <div class="email-sig" style="max-width:420px;margin-top:20px;">
+      <div class="bar"></div>
+      <div>
+        <img src="pc-tec-logo.png" style="width:90px;height:auto;" />
+        <div style="font-weight:800;font-size:14px;color:#0B1F3A;margin-top:8px;">Eigon Perdigão da Silva</div>
+        <div style="font-size:11px;color:#1C6DD0;">Sócio-fundador — P&amp;C Tec</div>
+        <div style="font-size:10.5px;color:#64748B;margin-top:6px;line-height:1.6;">
+          contato@generaltecnologia.com<br>
+          generaltecnologia.com<br>
+          Itabuna – BA
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:22px;"><b>Diretrizes:</b> logotipo colorido com no máximo 90px de largura,
+      barra vertical azul→navy separando a marca dos dados de contato, nome em navy, cargo em azul
+      P&amp;C. Evitar incluir frases motivacionais, banners promocionais ou múltiplas cores fora da
+      paleta oficial na assinatura.</p>
+  </div>
+
+  <!-- 14. APLICAÇÃO — BANNERS E APRESENTAÇÕES -->
+  <div class="page">
+    <h2 class="section-title">14 · Aplicação</h2>
+    <h1 class="page-title">Banners e apresentações</h1>
+    <div class="ad-banner" style="margin-top:20px;">
+      <div style="display:flex;align-items:center;gap:14px;position:relative;z-index:1;">
+        <img src="pc-tec-logo-white.png" style="width:100px;height:auto;" />
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;">Tecnologia e Integração</div>
+          <div style="color:#94A3B8;font-size:10px;">Produtos digitais próprios, com IA aplicada.</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,#1C6DD0,#2E8FFF);color:#fff;font-size:10px;font-weight:700;padding:8px 16px;border-radius:999px;position:relative;z-index:1;">Saiba mais</div>
+    </div>
+    <p style="font-size:11px;color:#64748B;margin-top:8px;">Banner institucional (proporção 4:1) — para uso em anúncios, apresentações e materiais de parceiros</p>
+    <table style="margin-top:24px;">
+      <tr><th>Formato</th><th>Dimensão sugerida</th><th>Uso</th></tr>
+      <tr><td>Banner web horizontal</td><td>1200×300px</td><td>Topo de site parceiro, e-mail marketing</td></tr>
+      <tr><td>Banner retangular</td><td>300×250px</td><td>Anúncios display (Google Ads, portais)</td></tr>
+      <tr><td>Post social (quadrado)</td><td>1080×1080px</td><td>Instagram/LinkedIn feed</td></tr>
+      <tr><td>Capa de rede social</td><td>1584×396px</td><td>LinkedIn/Facebook capa</td></tr>
+      <tr><td>Slide de apresentação</td><td>1920×1080px (16:9)</td><td>Capa/rodapé de slides institucionais</td></tr>
+    </table>
+    <p style="margin-top:16px;">Em apresentações (slides), usar a logo branca no canto inferior
+      direito de cada slide (altura ~18px), e a versão colorida em tela cheia apenas no slide de
+      abertura e encerramento, sobre fundo navy.</p>
+  </div>
+
+  <!-- 15. CHECKLIST -->
+  <div class="page">
+    <h2 class="section-title">15 · Checklist</h2>
     <h1 class="page-title">Antes de publicar, confirme</h1>
     <table>
       <tr><th>Item</th><th>Ok?</th></tr>
-      <tr><td>Usei o arquivo oficial do símbolo/lockup (não recriei ou tirei print)</td><td>☐</td></tr>
+      <tr><td>Usei o arquivo oficial do logotipo (não recriei ou tirei print)</td><td>☐</td></tr>
       <tr><td>Respeitei a área de proteção mínima ao redor do símbolo</td><td>☐</td></tr>
       <tr><td>Usei as cores oficiais da paleta (não variações aproximadas)</td><td>☐</td></tr>
       <tr><td>Usei Inter (ou fallback do sistema) como tipografia</td><td>☐</td></tr>
       <tr><td>O contexto é institucional (P&amp;C Tec) e não de um produto específico</td><td>☐</td></tr>
       <tr><td>O tamanho está acima do mínimo definido neste manual</td><td>☐</td></tr>
+      <tr><td>Usei a versão correta (colorida em fundo claro / branca em fundo escuro)</td><td>☐</td></tr>
+      <tr><td>Em redes sociais, mantive margem de segurança no recorte circular/banner</td><td>☐</td></tr>
+      <tr><td>Em papelaria impressa, usei os valores CMYK (não RGB) da paleta</td><td>☐</td></tr>
+      <tr><td>Assinatura de e-mail/crachá/timbrado seguem o modelo de referência deste manual</td><td>☐</td></tr>
     </table>
     <p style="margin-top:26px;font-size:11.5px;color:#64748B;">Dúvidas sobre uso da marca:
       contato@generaltecnologia.com — Perdigão &amp; Carneiro Tecnologias LTDA, CNPJ
