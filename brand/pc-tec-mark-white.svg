@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 136 136" width="120" height="120" role="img" aria-label="P&amp;C Tec">
+  <!-- faceted octagon "node" shape, outline version for dark backgrounds -->
+  <polygon points="25,0 95,0 120,25 120,95 95,120 25,120 0,95 0,25"
+           fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <circle cx="0" cy="60" r="7" fill="#FFFFFF"/>
+  <circle cx="120" cy="60" r="7" fill="#FFFFFF"/>
+  <text x="60" y="62" text-anchor="middle" dy=".35em"
+        font-family="Inter, Arial, sans-serif" font-weight="800" font-size="42"
+        fill="#FFFFFF" letter-spacing="-1">P&amp;C</text>
+</svg>
