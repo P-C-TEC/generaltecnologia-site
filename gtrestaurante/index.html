@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTRestaurante — Gestão completa para restaurantes</title>
+  <meta name="description" content="Sistema de gestão completo para restaurantes com IA integrada. Controle CMV, checklists, reservas, equipe, documentos e muito mais. Teste grátis por 14 dias." />
+  <meta property="og:title" content="GTRestaurante — Gestão completa para restaurantes" />
+  <meta property="og:description" content="Sistema de gestão completo para restaurantes com IA integrada." />
+  <meta property="og:image" content="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" />
+  <link rel="icon" href="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#FF6B00', 'brand-dark': '#CC5500' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          animation: { 'fade-up': 'fadeUp 0.6s ease forwards' },
+          keyframes: { fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    .gradient-bg { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.18) 0%, transparent 60%), linear-gradient(180deg, #08111e 0%, #04080f 100%); }
+    .card-glow { box-shadow: 0 0 0 1px rgba(255,107,0,0.15), 0 24px 48px -12px rgba(0,0,0,0.7); }
+    .btn-primary { background: linear-gradient(135deg, #FF6B00, #FF8A00); box-shadow: 0 8px 32px -8px rgba(255,107,0,0.6); }
+    .btn-primary:hover { background: linear-gradient(135deg, #FF8A00, #FFa030); box-shadow: 0 12px 40px -8px rgba(255,107,0,0.8); }
+    .text-gradient { background: linear-gradient(135deg, #FF6B00, #FFB347); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .module-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
+    .module-card:hover { background: rgba(255,107,0,0.08); border-color: rgba(255,107,0,0.3); transform: translateY(-2px); }
+    .price-card { background: linear-gradient(180deg, rgba(19,31,53,0.9), rgba(7,12,23,0.9)); border: 1px solid rgba(255,255,255,0.08); }
+    .price-card.featured { border-color: rgba(255,107,0,0.5); box-shadow: 0 0 0 1px rgba(255,107,0,0.2), 0 32px 64px -16px rgba(255,107,0,0.3); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="gradient-bg text-white font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[rgba(4,8,15,0.85)] backdrop-blur-2xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-3">
+        <a href="/" class="hidden text-xs font-semibold text-slate-500 hover:text-white transition sm:inline">General Tecnologia</a>
+        <span class="hidden text-slate-700 sm:inline">/</span>
+        <div class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl border border-brand/30"><img src="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" alt="GTRestaurante" class="h-full w-full object-cover" /></div>
+        <span class="text-base font-bold text-white">GTRestaurante</span>
+      </div>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#modulos" class="text-sm text-slate-400 hover:text-white transition">Módulos</a>
+        <a href="#ia" class="text-sm text-slate-400 hover:text-white transition">IA</a>
+        <a href="#precos" class="text-sm text-slate-400 hover:text-white transition">Preços</a>
+        <a href="#faq" class="text-sm text-slate-400 hover:text-white transition">FAQ</a>
+      </div>
+      <a href="https://gtrestaurante.generaltecnologia.com" target="_blank"
+         class="btn-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition">
+        Testar grátis
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-24 px-6 text-center">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold text-brand">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand animate-pulse"></span>
+        IA integrada nativa — disponível agora
+      </div>
+      <h1 class="mb-6 text-5xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+        Gestão completa<br>para restaurantes.<br>
+        <span class="text-gradient">Com IA integrada.</span>
+      </h1>
+      <p class="mx-auto mb-10 max-w-2xl text-lg text-slate-400 leading-relaxed">
+        Controle CMV, checklists operacionais, reservas, equipe, documentos, finanças e muito mais — tudo em uma plataforma moderna com assistente de IA para decisões mais inteligentes.
+      </p>
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="https://gtrestaurante.generaltecnologia.com" target="_blank"
+           class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white transition">
+          Começar teste grátis — 14 dias
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#modulos"
+           class="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-slate-300 hover:border-white/20 hover:text-white transition">
+          Ver funcionalidades
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-slate-600">Sem cartão de crédito. Sem compromisso.</p>
+    </div>
+
+    <!-- App preview mockup -->
+    <div class="mx-auto mt-20 max-w-5xl">
+      <div class="relative rounded-2xl border border-white/10 bg-[rgba(8,15,28,0.8)] p-1 shadow-[0_40px_120px_-30px_rgba(255,107,0,0.2)]">
+        <div class="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+          <div class="h-3 w-3 rounded-full bg-red-500/70"></div>
+          <div class="h-3 w-3 rounded-full bg-yellow-500/70"></div>
+          <div class="h-3 w-3 rounded-full bg-green-500/70"></div>
+          <div class="ml-4 flex h-6 flex-1 items-center justify-center rounded-md bg-white/5 text-[11px] text-slate-500">app.generaltecnologia.com</div>
+        </div>
+        <div class="grid grid-cols-4 gap-0 min-h-[280px] overflow-hidden rounded-xl">
+          <!-- sidebar fake -->
+          <div class="border-r border-white/[0.06] bg-[rgba(4,8,15,0.6)] p-4 col-span-1">
+            <div class="mb-4 h-8 w-3/4 rounded-lg bg-brand/20 border border-brand/30 flex items-center px-3">
+              <span class="text-[10px] font-bold text-brand">Dashboard</span>
+            </div>
+            <div class="space-y-1.5">
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">CMV</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Insumos</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Financeiro</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Reservas</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Equipe</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Documentos</span></div>
+              <div class="h-7 rounded-md bg-white/[0.04] flex items-center px-2.5"><span class="text-[10px] text-slate-500">Checklists</span></div>
+            </div>
+          </div>
+          <!-- main content fake -->
+          <div class="col-span-3 p-5 space-y-3">
+            <div class="grid grid-cols-3 gap-3">
+              <div class="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3">
+                <p class="text-[10px] text-slate-500 mb-1">CMV do Mês</p>
+                <p class="text-xl font-bold text-brand">28,4%</p>
+                <p class="text-[9px] text-green-400 mt-0.5">▼ 2,1% vs mês ant.</p>
+              </div>
+              <div class="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3">
+                <p class="text-[10px] text-slate-500 mb-1">Reservas Hoje</p>
+                <p class="text-xl font-bold text-white">47</p>
+                <p class="text-[9px] text-slate-400 mt-0.5">89% da capacidade</p>
+              </div>
+              <div class="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3">
+                <p class="text-[10px] text-slate-500 mb-1">NPS</p>
+                <p class="text-xl font-bold text-green-400">+72</p>
+                <p class="text-[9px] text-slate-400 mt-0.5">Promotores: 81%</p>
+              </div>
+            </div>
+            <div class="rounded-xl bg-white/[0.04] border border-brand/20 p-3 flex items-start gap-2">
+              <span class="text-brand text-base">✦</span>
+              <div>
+                <p class="text-[10px] font-semibold text-white mb-0.5">Assistente IA</p>
+                <p class="text-[10px] text-slate-400">Seu CMV está 2,1% abaixo do mês anterior. Principais economias: Proteínas (-4%) e Bebidas (-1,8%). Recomendo manter o mix atual e revisar a ficha técnica do prato X.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3">
+                <p class="text-[10px] text-slate-500 mb-2">Checklists Hoje</p>
+                <div class="space-y-1">
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Abertura Cozinha</span><span class="text-green-400">✓</span></div>
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Higiene Equipamentos</span><span class="text-green-400">✓</span></div>
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Fechamento Salão</span><span class="text-amber-400">Pendente</span></div>
+                </div>
+              </div>
+              <div class="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3">
+                <p class="text-[10px] text-slate-500 mb-2">Documentos</p>
+                <div class="space-y-1">
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Alvará 2025</span><span class="text-green-400">Válido</span></div>
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Vigilância Sanitária</span><span class="text-amber-400">30 dias</span></div>
+                  <div class="flex justify-between text-[9px]"><span class="text-slate-400">Bombeiros AVCB</span><span class="text-green-400">Válido</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="py-20 px-6">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="mb-12 text-center text-3xl font-bold text-white">Você reconhece esses problemas?</h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">📋</div>
+          <h3 class="mb-2 font-semibold text-white">Checklists no papel</h3>
+          <p class="text-sm text-slate-400">Conferências manuais, difíceis de auditar, sem histórico e sem alertas.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">📉</div>
+          <h3 class="mb-2 font-semibold text-white">CMV fora de controle</h3>
+          <p class="text-sm text-slate-400">Sem visibilidade de custo por prato, desperdícios invisíveis e margem corroída.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">📁</div>
+          <h3 class="mb-2 font-semibold text-white">Documentos vencendo</h3>
+          <p class="text-sm text-slate-400">Alvarás e licenças espalhados em pastas. Ninguém sabe o que vence quando.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">📞</div>
+          <h3 class="mb-2 font-semibold text-white">Reservas por WhatsApp</h3>
+          <p class="text-sm text-slate-400">Confirmações manuais, overbooking, esquecimentos e clientes sem NPS.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">🧾</div>
+          <h3 class="mb-2 font-semibold text-white">Financeiro em planilha</h3>
+          <p class="text-sm text-slate-400">DRE desatualizado, sem fluxo de caixa em tempo real, decisões no escuro.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-3 text-2xl">👥</div>
+          <h3 class="mb-2 font-semibold text-white">Equipe sem controle</h3>
+          <p class="text-sm text-slate-400">Presenças no caderno, treinamentos sem registro, rotatividade alta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modulos" class="py-20 px-6">
+    <div class="mx-auto max-w-5xl">
+      <div class="mb-4 text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand">13 módulos integrados</span>
+      </div>
+      <h2 class="mb-4 text-center text-3xl font-bold text-white">Tudo que seu restaurante precisa</h2>
+      <p class="mb-12 text-center text-slate-400">Plataforma completa. Sem integrações externas. Sem cobrar por módulo.</p>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">📊</div>
+          <h3 class="font-semibold text-white">Dashboard</h3>
+          <p class="mt-1 text-xs text-slate-400">Visão executiva com briefing diário gerado por IA.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">✅</div>
+          <h3 class="font-semibold text-white">Checklists</h3>
+          <p class="mt-1 text-xs text-slate-400">Operacionais digitais com auditoria e alertas em tempo real.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">📦</div>
+          <h3 class="font-semibold text-white">Insumos</h3>
+          <p class="mt-1 text-xs text-slate-400">Estoque, compras, requisições e alertas de ruptura.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">🍽️</div>
+          <h3 class="font-semibold text-white">Cardápio</h3>
+          <p class="mt-1 text-xs text-slate-400">Fichas técnicas, custo por prato e análise de rentabilidade.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">📐</div>
+          <h3 class="font-semibold text-white">Receitas</h3>
+          <p class="mt-1 text-xs text-slate-400">Padronização de receitas e controle de rendimento.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">📉</div>
+          <h3 class="font-semibold text-white">CMV</h3>
+          <p class="mt-1 text-xs text-slate-400">Custo de mercadoria vendida com análise histórica e metas.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">💰</div>
+          <h3 class="font-semibold text-white">Financeiro</h3>
+          <p class="mt-1 text-xs text-slate-400">DRE, fluxo de caixa, lançamentos e relatórios gerenciais.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">👥</div>
+          <h3 class="font-semibold text-white">Equipe</h3>
+          <p class="mt-1 text-xs text-slate-400">Cadastro, presenças, treinamentos e controle de acesso.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">🛠️</div>
+          <h3 class="font-semibold text-white">Ativos</h3>
+          <p class="mt-1 text-xs text-slate-400">Equipamentos, manutenções preventivas e histórico.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">📁</div>
+          <h3 class="font-semibold text-white">Documentos</h3>
+          <p class="mt-1 text-xs text-slate-400">Alvarás, licenças e certificações com alertas de vencimento.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">🎉</div>
+          <h3 class="font-semibold text-white">Eventos & Reservas</h3>
+          <p class="mt-1 text-xs text-slate-400">Portal público com link curto, confirmação automática e NPS.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">💼</div>
+          <h3 class="font-semibold text-white">Comercial</h3>
+          <p class="mt-1 text-xs text-slate-400">Propostas, orçamentos e controle do funil de vendas B2B.</p>
+        </div>
+        <div class="module-card rounded-2xl p-5">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-xl">⭐</div>
+          <h3 class="font-semibold text-white">Feedbacks</h3>
+          <p class="mt-1 text-xs text-slate-400">NPS de reservas, análise de satisfação e tendências.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IA SECTION -->
+  <section id="ia" class="py-20 px-6">
+    <div class="mx-auto max-w-5xl">
+      <div class="rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/10 via-transparent to-transparent p-10 lg:p-14">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-brand">Inteligência Artificial</span>
+            <h2 class="mb-6 text-3xl font-bold text-white leading-tight">IA que trabalha<br>enquanto você gerencia</h2>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/20 text-xs text-brand font-bold">✦</div>
+                <div>
+                  <p class="font-semibold text-white text-sm">Briefing executivo diário</p>
+                  <p class="text-sm text-slate-400">Toda vez que você abre o dashboard, a IA já preparou um resumo com os alertas mais importantes do dia.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/20 text-xs text-brand font-bold">✦</div>
+                <div>
+                  <p class="font-semibold text-white text-sm">Alertas proativos via WhatsApp</p>
+                  <p class="text-sm text-slate-400">CMV acima do limite, documentos vencendo, estoque crítico — você recebe no WhatsApp antes do problema virar crise.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/20 text-xs text-brand font-bold">✦</div>
+                <div>
+                  <p class="font-semibold text-white text-sm">Assistente conversacional</p>
+                  <p class="text-sm text-slate-400">Pergunte sobre seu CMV, finanças, checklists ou qualquer módulo. A IA responde com os dados reais do seu restaurante.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/20 text-xs text-brand font-bold">✦</div>
+                <div>
+                  <p class="font-semibold text-white text-sm">Relatórios com análise inteligente</p>
+                  <p class="text-sm text-slate-400">Cada relatório tem uma análise contextualizada gerada por IA, com sugestões de ação específicas para o seu negócio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chat mockup -->
+          <div class="rounded-2xl border border-white/10 bg-[rgba(4,8,15,0.7)] p-4 backdrop-blur-xl">
+            <div class="mb-3 flex items-center gap-2 border-b border-white/[0.06] pb-3">
+              <div class="flex h-7 w-7 items-center justify-center rounded-lg bg-brand/20 text-xs font-bold text-brand">✦</div>
+              <span class="text-sm font-semibold text-white">Assistente GTRestaurante</span>
+              <span class="ml-auto h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+            </div>
+            <div class="space-y-3 text-xs">
+              <div class="flex justify-end">
+                <div class="rounded-2xl rounded-tr-sm bg-brand/20 px-3 py-2 text-white max-w-[75%]">
+                  Como está meu CMV esse mês?
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <div class="h-6 w-6 shrink-0 rounded-full bg-brand/20 flex items-center justify-center text-[10px] text-brand">✦</div>
+                <div class="rounded-2xl rounded-tl-sm bg-white/[0.06] px-3 py-2 text-slate-300 max-w-[85%]">
+                  Seu CMV está em <strong class="text-white">28,4%</strong> — 2,1% abaixo do mês passado 🎯<br><br>
+                  Principais reduções: <strong class="text-green-400">Proteínas (-4%)</strong> e <strong class="text-green-400">Bebidas (-1,8%)</strong>.<br><br>
+                  Sugestão: Revisar ficha técnica do Filé Mignon para manter consistência na próxima semana.
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div class="rounded-2xl rounded-tr-sm bg-brand/20 px-3 py-2 text-white max-w-[75%]">
+                  Quais documentos vencem em breve?
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <div class="h-6 w-6 shrink-0 rounded-full bg-brand/20 flex items-center justify-center text-[10px] text-brand">✦</div>
+                <div class="rounded-2xl rounded-tl-sm bg-white/[0.06] px-3 py-2 text-slate-300 max-w-[85%]">
+                  <strong class="text-amber-400">⚠ 2 documentos próximos do vencimento:</strong><br>
+                  • Vigilância Sanitária — <strong class="text-amber-400">30 dias</strong><br>
+                  • Alvará de Funcionamento — <strong class="text-amber-400">45 dias</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="precos" class="py-20 px-6">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-4 text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand">Preços</span>
+      </div>
+      <h2 class="mb-4 text-center text-3xl font-bold text-white">Simples e transparente</h2>
+      <p class="mb-12 text-center text-slate-400">Sem cobrar por módulo. Sem surpresas. Cancele quando quiser.</p>
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- Trial -->
+        <div class="price-card rounded-2xl p-6">
+          <p class="text-sm font-semibold text-slate-400">Trial</p>
+          <div class="my-4 flex items-end gap-1">
+            <span class="text-4xl font-black text-white">Grátis</span>
+          </div>
+          <p class="mb-6 text-xs text-slate-500">14 dias. Sem cartão de crédito.</p>
+          <ul class="mb-8 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Todos os 13 módulos</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> IA incluída</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Portal de reservas</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Suporte por email</li>
+          </ul>
+          <a href="https://gtrestaurante.generaltecnologia.com" target="_blank"
+             class="block w-full rounded-xl border border-white/10 py-2.5 text-center text-sm font-semibold text-white hover:border-brand/40 hover:bg-brand/10 transition">
+            Começar grátis
+          </a>
+        </div>
+        <!-- Pro — featured -->
+        <div class="price-card featured rounded-2xl p-6 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="rounded-full bg-brand px-3 py-1 text-[11px] font-bold text-white">Mais popular</span>
+          </div>
+          <p class="text-sm font-semibold text-brand">Profissional</p>
+          <div class="my-4 flex items-end gap-1">
+            <span class="text-4xl font-black text-white">R$ 297</span>
+            <span class="mb-1.5 text-slate-400">/mês</span>
+          </div>
+          <p class="mb-6 text-xs text-slate-500">Por unidade. Cobrado mensalmente.</p>
+          <ul class="mb-8 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Tudo do Trial</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Usuários ilimitados</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Alertas WhatsApp IA</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Auditoria completa</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Suporte prioritário</li>
+          </ul>
+          <a href="https://gtrestaurante.generaltecnologia.com" target="_blank"
+             class="btn-primary block w-full rounded-xl py-2.5 text-center text-sm font-bold text-white transition">
+            Assinar agora
+          </a>
+        </div>
+        <!-- Enterprise -->
+        <div class="price-card rounded-2xl p-6">
+          <p class="text-sm font-semibold text-slate-400">Enterprise</p>
+          <div class="my-4 flex items-end gap-1">
+            <span class="text-4xl font-black text-white">Custom</span>
+          </div>
+          <p class="mb-6 text-xs text-slate-500">Para redes com múltiplas unidades.</p>
+          <ul class="mb-8 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Tudo do Profissional</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Multi-unidades</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Dashboard consolidado</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> SLA e onboarding dedicado</li>
+            <li class="flex gap-2"><span class="text-green-400">✓</span> Integrações sob medida</li>
+          </ul>
+          <a href="mailto:contato@generaltecnologia.com"
+             class="block w-full rounded-xl border border-white/10 py-2.5 text-center text-sm font-semibold text-white hover:border-brand/40 hover:bg-brand/10 transition">
+            Falar com vendas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6">
+    <div class="mx-auto max-w-2xl">
+      <h2 class="mb-12 text-center text-3xl font-bold text-white">Perguntas frequentes</h2>
+      <div class="space-y-4" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-24 px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="mb-6 text-4xl font-black text-white leading-tight">Pronto para transformar<br>a gestão do seu restaurante?</h2>
+      <p class="mb-8 text-slate-400">Comece hoje. 14 dias grátis. Sem cartão de crédito.</p>
+      <a href="https://gtrestaurante.generaltecnologia.com" target="_blank"
+         class="btn-primary inline-flex items-center gap-2 rounded-full px-10 py-5 text-lg font-bold text-white transition">
+        Começar agora — é grátis
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.06] py-10 px-6">
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+      <div class="flex items-center gap-2">
+        <div class="flex h-7 w-7 items-center justify-center overflow-hidden rounded-lg border border-brand/30"><img src="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" alt="GTRestaurante" class="h-full w-full object-cover" /></div>
+        <span class="text-sm font-bold text-white">GTRestaurante</span>
+      </div>
+      <p class="text-xs text-slate-600">Um produto <a href="/" class="text-slate-400 hover:text-white transition">General Tecnologia</a>. © 2026 Perdigão &amp; Carneiro Tecnologias LTDA.</p>
+      <div class="flex gap-4">
+        <a href="mailto:contato@generaltecnologia.com" class="text-xs text-slate-500 hover:text-white transition">Contato</a>
+        <a href="https://gtrestaurante.generaltecnologia.com?legal=termos" target="_blank" class="text-xs text-slate-500 hover:text-white transition">Termos</a>
+        <a href="https://gtrestaurante.generaltecnologia.com?legal=privacidade" target="_blank" class="text-xs text-slate-500 hover:text-white transition">Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    const faqs = [
+      { q: 'Preciso instalar alguma coisa?', a: 'Não. GTRestaurante é 100% web. Funciona em qualquer navegador moderno, no computador, tablet ou celular. Sem instalação.' },
+      { q: 'Posso cancelar a qualquer momento?', a: 'Sim. Sem multa, sem burocracia. Cancele pelo próprio painel quando quiser.' },
+      { q: 'Meus dados ficam seguros?', a: 'Seus dados são armazenados no Supabase (infraestrutura AWS), com RLS — cada restaurante só vê seus próprios dados. HTTPS em tudo.' },
+      { q: 'Funciona para redes com várias unidades?', a: 'Sim. O plano Enterprise suporta multi-tenancy com dashboard consolidado para visualizar todas as unidades.' },
+      { q: 'Quantos usuários posso ter?', a: 'No plano Profissional, usuários ilimitados. Cada usuário tem perfil e permissões configuráveis (Proprietário, Gerente, Operacional, etc).' },
+      { q: 'O assistente de IA tem custo extra?', a: 'Não. A IA está inclusa em todos os planos pagos, inclusive no trial de 14 dias.' },
+    ];
+
+    const faqList = document.getElementById('faq-list');
+    faqs.forEach((faq, i) => {
+      const div = document.createElement('div');
+      div.className = 'module-card rounded-2xl overflow-hidden';
+      div.innerHTML = `
+        <button onclick="toggleFaq(${i})" class="flex w-full items-center justify-between px-5 py-4 text-left">
+          <span class="font-semibold text-white text-sm">${faq.q}</span>
+          <svg id="faq-icon-${i}" class="h-4 w-4 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="faq-answer-${i}" class="hidden px-5 pb-4 text-sm text-slate-400">${faq.a}</div>
+      `;
+      faqList.appendChild(div);
+    });
+
+    function toggleFaq(i) {
+      const answer = document.getElementById('faq-answer-' + i);
+      const icon = document.getElementById('faq-icon-' + i);
+      answer.classList.toggle('hidden');
+      icon.style.transform = answer.classList.contains('hidden') ? '' : 'rotate(180deg)';
+    }
+  </script>
+</body>
+</html>

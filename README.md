@@ -8,8 +8,13 @@ via `vercel deploy` direto da CLI, sem repositório Git associado.
 
 ## Estrutura
 
-- `index.html` — página única, estática (Tailwind via CDN), reconstruída a partir do
-  conteúdo em produção em 15/08/2026.
+- `index.html` — home institucional da General Tecnologia (empresa, produtos, contato).
+- `gtrestaurante/index.html` — página de vendas do produto GTRestaurante (antigo `index.html`
+  da raiz, movido para cá quando o site passou a ser institucional).
+- `vercel.json` — `cleanUrls`/`trailingSlash` para servir `/gtrestaurante` sem barra final.
+
+Ambas as páginas são estáticas (Tailwind via CDN), reconstruídas a partir do conteúdo em
+produção em 15/08/2026.
 
 ## Deploy
 
