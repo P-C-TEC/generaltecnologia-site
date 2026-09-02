@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Manuais de identidade visual: material interno, nao linkado de lugar nenhum.
+# Ficam acessiveis a quem tem o endereco, mas fora do indice de busca.
+Disallow: /brand/manual-
+
+Sitemap: https://pectecs.com.br/sitemap.xml

@@ -1,7 +1,9 @@
 # generaltecnologia-site
 
 Site institucional da **PERDIGAO & CARNEIRO TECNOLOGIAS LTDA** (marca "General Tecnologia"),
-publicado em `generaltecnologia.com` / `www.generaltecnologia.com` via Vercel.
+publicado em `pectecs.com.br` via Vercel. `generaltecnologia.com` e `www` redirecionam para la
+(308) -- o dominio alcancou a marca, que ja era P&C Tec no manual de identidade, nos logos e no
+proprio site. O subdominio `gtrestaurante.generaltecnologia.com` NAO muda: e onde o produto roda.
 
 Este repositório passou a versionar o código deste site, que antes era publicado apenas
 via `vercel deploy` direto da CLI, sem repositório Git associado.
@@ -17,7 +19,15 @@ via `vercel deploy` direto da CLI, sem repositório Git associado.
   da raiz, movido para cá quando o site passou a ser institucional).
 - `gtrestaurante/termos.html` — Termos de Uso estáticos do produto.
 - `gtrestaurante/privacidade.html` — Política de Privacidade estática do produto.
-- `vercel.json` — `cleanUrls`/`trailingSlash` para servir `/gtrestaurante` sem barra final.
+- `vercel.json` — `cleanUrls`/`trailingSlash` para servir `/gtrestaurante` sem barra final, e os
+  CABECALHOS DE SEGURANCA (CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy,
+  Permissions-Policy). A CSP permite exatamente o que as paginas usam: Tailwind por CDN, fontes
+  do Google e imagens de `gtrestaurante.generaltecnologia.com` e `mordomotec.com.br`. Ao
+  acrescentar recurso externo novo, a CSP precisa acompanhar -- senao ele e bloqueado em
+  silencio no navegador do visitante.
+- `robots.txt` / `sitemap.xml` — as duas paginas sao de VENDA e dependem de busca. O robots tira
+  os manuais de `/brand/` do indice: eles nao sao segredo, mas tambem nao sao linkados de lugar
+  nenhum, entao estavam publicos por acidente e nao por decisao.
 
 Ambas as páginas são estáticas (Tailwind via CDN), reconstruídas a partir do conteúdo em
 produção em 15/08/2026.
