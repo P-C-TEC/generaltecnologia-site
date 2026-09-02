@@ -9,6 +9,10 @@ via `vercel deploy` direto da CLI, sem repositório Git associado.
 ## Estrutura
 
 - `index.html` — home institucional da General Tecnologia (empresa, produtos, contato).
+  A secao de produtos lista GTRestaurante e Mordomo Tec. O card do Mordomo aponta direto
+  para `mordomotec.com.br`, e nao para uma pagina de vendas aqui dentro: a raiz daquele app JA
+  e a landing do produto, e manter duas paginas do mesmo produto garante que uma das duas fique
+  desatualizada.
 - `gtrestaurante/index.html` — página de vendas do produto GTRestaurante (antigo `index.html`
   da raiz, movido para cá quando o site passou a ser institucional).
 - `gtrestaurante/termos.html` — Termos de Uso estáticos do produto.
