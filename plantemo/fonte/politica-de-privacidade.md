@@ -7,7 +7,7 @@ com sede em Itabuna, Bahia, que atua sob a marca **P&C Tec**. É ela a **control
 dados pessoais, nos termos da Lei 13.709/2018 (LGPD).
 
 **Encarregado pelo tratamento de dados pessoais** (art. 41 da LGPD): indicado pela P&C Tec, com
-contato em **privacidade@pectecs.com.br**.
+contato em **privacidadeplantemo@generaltecnologia.com**.
 
 Esta política explica, em português simples, **o que o aplicativo guarda sobre você, com base em
 qual hipótese legal, por quanto tempo, com quem compartilha e o que você pode exigir**. Ela vale
@@ -93,7 +93,7 @@ artificial redige textos; ela não decide, não classifica você e não cria nú
 ela escreve é conferido contra a fonte antes de aparecer.
 
 Ainda assim, se você quiser **revisão de qualquer resultado** que o aplicativo tenha produzido
-sobre a sua lavoura, escreva para **privacidade@pectecs.com.br**: uma pessoa revisa (LGPD,
+sobre a sua lavoura, escreva para **privacidadeplantemo@generaltecnologia.com**: uma pessoa revisa (LGPD,
 art. 20).
 
 ---
@@ -154,7 +154,7 @@ Todos podem ser exercidos **dentro do aplicativo**, sem precisar pedir a ningué
 | Corrigir o que estiver errado | Nas próprias telas, editando |
 | Apagar tudo e encerrar a conta | Perfil → **Excluir conta e dados** |
 | Retirar um consentimento | Perfil → Privacidade |
-| Revisão de resultado, portabilidade, oposição, informação sobre compartilhamento | **privacidade@pectecs.com.br** |
+| Revisão de resultado, portabilidade, oposição, informação sobre compartilhamento | **privacidadeplantemo@generaltecnologia.com** |
 
 **Prazos.** Para **confirmação e acesso**, respondemos em formato simplificado imediatamente, ou
 em até **15 dias** na forma completa (LGPD, art. 19). Os demais pedidos são atendidos o mais
@@ -200,7 +200,7 @@ Adolescentes entre 12 e 18 anos podem usar **com supervisão do responsável**, 
 uso, e o tratamento dos dados deles observa o melhor interesse.
 
 Se você é responsável por um menor e quer acessar ou apagar dados dele, escreva para
-**privacidade@pectecs.com.br**.
+**privacidadeplantemo@generaltecnologia.com**.
 
 ---
 
@@ -228,5 +228,5 @@ leia a versão nova. Versões anteriores ficam registradas com a data.
 **PERDIGÃO & CARNEIRO TECNOLOGIAS LTDA** — CNPJ 68.508.547/0001-36
 Itabuna, Bahia, Brasil
 
-- Encarregado pelo tratamento de dados: **privacidade@pectecs.com.br**
+- Encarregado pelo tratamento de dados: **privacidadeplantemo@generaltecnologia.com**
 - Assuntos gerais: **contato@generaltecnologia.com**
