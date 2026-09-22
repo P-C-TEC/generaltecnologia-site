@@ -37,3 +37,55 @@ produção em 15/08/2026.
 Projeto Vercel: `general-tecnologia/generaltecnologia-landing`.
 Após conectar este repositório ao projeto na Vercel (Git Integration), todo push em
 `main` gera um deploy de produção automaticamente.
+
+
+## As páginas legais do Plantemo são geradas
+
+Os mesmos textos existem em dois lugares por motivos diferentes: a Google Play exige um endereço
+público, e o aplicativo precisa mostrar a política **sem internet**. Dois documentos escritos à
+mão contando a mesma coisa é o arranjo que garante que, daqui a seis meses, eles contem coisas
+diferentes — e num documento legal isso não é detalhe de manutenção.
+
+Para atualizar:
+
+```bash
+# 1. copie os .md novos do repositório do Plantemo
+cp ../PLANTEMO/docs/politica-de-privacidade.md plantemo/fonte/
+cp ../PLANTEMO/docs/termos-de-uso.md plantemo/fonte/
+
+# 2. gere
+node plantemo/gerar-legais.mjs
+
+# 3. confira o diff e faça o commit das duas coisas juntas
+```
+
+## O domínio plantemo.com.br
+
+O produto tem domínio próprio, e ele aponta para **este mesmo projeto da Vercel**. Quem faz a
+ligação é a reescrita em `vercel.json`:
+
+```json
+{
+  "source": "/((?!plantemo/|brand/|robots\.txt|sitemap\.xml).*)",
+  "has": [{ "type": "host", "value": "(www\.)?plantemo\.com\.br" }],
+  "destination": "/plantemo/$1"
+}
+```
+
+Ela é **condicionada ao domínio**: `pectecs.com.br` não passa por ela e não pode quebrar por
+causa dela. Em `plantemo.com.br`, a raiz serve `/plantemo`, `/privacidade` serve
+`/plantemo/privacidade`, e assim por diante.
+
+Falta fazer, no painel da Vercel: adicionar `plantemo.com.br` e `www.plantemo.com.br` como
+domínios deste projeto e apontar o DNS. Depois disso, confira:
+
+| Endereço | Deve mostrar |
+| --- | --- |
+| `plantemo.com.br` | a página do Plantemo |
+| `plantemo.com.br/privacidade` | a política de privacidade |
+| `plantemo.com.br/termos` | os termos de uso |
+| `pectecs.com.br` | a home da P&C Tec, **sem mudança nenhuma** |
+| `pectecs.com.br/plantemo` | a mesma página do Plantemo |
+
+Se a reescrita não se comportar, apagar o bloco `rewrites` do `vercel.json` devolve tudo ao
+estado anterior — `plantemo.com.br` passa a mostrar a home institucional, e nada mais quebra.

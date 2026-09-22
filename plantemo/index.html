@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantemo — O que plantar, quando e quanto rende</title>
+  <meta name="description" content="Consultor de plantio de bolso para o pequeno produtor rural. Época oficial do zoneamento, produção do IBGE na sua cidade e manejo dos manuais da Embrapa — com a fonte escrita na tela." />
+  <meta property="og:title" content="Plantemo — O que plantar, quando e quanto rende" />
+  <meta property="og:description" content="Época oficial de plantio, quanto a sua cidade costuma colher e o passo a passo de cultivo. Tudo com a fonte e o ano na tela." />
+  <meta property="og:image" content="https://pectecs.com.br/plantemo/capa.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/plantemo/icon.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#4E9A6E', 'brand-dark': '#1F4D36', terra: '#A34822' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    .gradient-bg { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(78,154,110,0.20) 0%, transparent 60%), linear-gradient(180deg, #0A1710 0%, #050B08 100%); }
+    .btn-primary { background: linear-gradient(135deg, #2F7350, #4E9A6E); box-shadow: 0 8px 32px -8px rgba(78,154,110,0.55); }
+    .btn-primary:hover { background: linear-gradient(135deg, #4E9A6E, #6FBE8E); box-shadow: 0 12px 40px -8px rgba(78,154,110,0.75); }
+    .text-gradient { background: linear-gradient(135deg, #6FBE8E, #C8E6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
+    .card:hover { background: rgba(78,154,110,0.08); border-color: rgba(78,154,110,0.3); transform: translateY(-2px); }
+    .fonte { border-left: 2px solid rgba(163,72,34,0.6); }
+  </style>
+</head>
+<body class="gradient-bg font-sans text-white antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[rgba(5,11,8,0.85)] backdrop-blur-2xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="/plantemo" class="flex items-center gap-2.5">
+        <img src="/plantemo/icon.png" alt="Plantemo" class="h-9 w-9 rounded-xl object-cover" />
+        <span class="text-base font-bold text-white">Plantemo</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#como-funciona" class="text-sm text-slate-400 transition hover:text-white">Como funciona</a>
+        <a href="#fontes" class="text-sm text-slate-400 transition hover:text-white">De onde vêm os números</a>
+        <a href="#limites" class="text-sm text-slate-400 transition hover:text-white">O que ele não faz</a>
+      </div>
+      <a href="#baixar" class="btn-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition">
+        Baixar
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="px-6 pb-20 pt-32 text-center">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold text-brand">
+        <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-brand"></span>
+        Para quem tem um pedaço de terra no Brasil
+      </div>
+      <h1 class="mb-6 text-5xl font-black leading-tight tracking-tight text-white md:text-6xl">
+        O que plantar, quando<br>e <span class="text-gradient">quanto rende.</span>
+      </h1>
+      <p class="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-400">
+        Você diz o que quer plantar. O Plantemo responde com a época oficial publicada por
+        portaria do Ministério da Agricultura, quanto a <strong class="text-white">sua cidade</strong>
+        costuma colher segundo o IBGE, e o passo a passo de cultivo escrito a partir dos manuais
+        da Embrapa.
+      </p>
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="#baixar" class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white transition">
+          Baixar o aplicativo
+        </a>
+        <a href="#fontes" class="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-slate-300 transition hover:border-white/20 hover:text-white">
+          De onde vêm os números
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">Grátis. Funciona sem internet. Sem anúncio.</p>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="px-6 py-20">
+    <div class="mx-auto max-w-5xl">
+      <div class="mb-4 text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand">Como funciona</span>
+      </div>
+      <h2 class="mb-4 text-center text-3xl font-bold text-white">Ele começa pela pergunta que você já tem</h2>
+      <p class="mb-12 text-center text-slate-400">
+        Quem tem terra tem história com ela, tem vizinho plantando e tem comprador na região.
+        Chega com "cacau" ou "milho" na cabeça, não com uma folha em branco.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="card rounded-2xl p-7">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/15 text-lg font-bold text-brand">1</div>
+          <h3 class="mb-2 text-lg font-bold text-white">Diga o que quer plantar</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            O zoneamento oficial cobre 89 culturas só em Itabuna. Procure pelo nome que você
+            usa — aipim, macaxeira ou mandioca dão no mesmo lugar.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/15 text-lg font-bold text-brand">2</div>
+          <h3 class="mb-2 text-lg font-bold text-white">Veja a época e o retorno</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            A janela de plantio da sua cidade, com o número da portaria. E quanto o seu município
+            costuma colher e a que preço — não a média do estado, que é outra história.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/15 text-lg font-bold text-brand">3</div>
+          <h3 class="mb-2 text-lg font-bold text-white">Siga o calendário</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Preparar a terra, plantar, colher — cada tarefa com a data e com a origem dela
+            escrita ao lado. Marque como feito e o aplicativo acompanha.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE TEM DENTRO -->
+  <section class="px-6 py-20">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="mb-12 text-center text-3xl font-bold text-white">O que tem dentro</h2>
+      <div class="grid gap-5 md:grid-cols-2">
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">Aviso de chuva ligado ao que você ia fazer</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            "Vai chover" não ajuda ninguém — quem planta já olha o céu. O que ajuda é
+            "adie o preparo da terra, vêm 35 mm em três dias". E o número vai escrito, para
+            você julgar sozinho.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">Como plantar, passo a passo</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Preparo do solo, espaçamento, muda, tratos e colheita — reescrito em português de
+            conversa a partir dos manuais da Embrapa, com a referência ao lado de cada bloco.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">A conta da sua lavoura</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Você lança o que gastou — semente, diária, adubo, combustível — e o aplicativo cruza
+            com o que a sua cidade rende. Média nacional de custo não serve: o que vale é o
+            preço que <strong class="text-white">você</strong> pagou.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">Funciona sem sinal</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            No campo, sinal ruim é a regra. O calendário fica guardado no aparelho e o que você
+            marcar sobe quando a internet voltar. A tela sempre diz de quando é o dado que está
+            mostrando.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">Foto da planta doente</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Fotografe a folha e receba o que pode ser, com o grau de certeza dito em voz alta.
+            Sem sinal, a foto fica na fila e sobe depois — ninguém volta ao pé da planta duas vezes.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-7">
+          <h3 class="mb-2 text-lg font-bold text-white">Leitura do laudo de solo</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Mande o PDF do laboratório e receba, em português simples, o que cada linha quer
+            dizer sobre a sua terra.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONTES -->
+  <section id="fontes" class="px-6 py-20">
+    <div class="mx-auto max-w-4xl">
+      <div class="rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/10 via-transparent to-transparent p-10 lg:p-14">
+        <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-brand">De onde vêm os números</span>
+        <h2 class="mb-6 text-3xl font-bold leading-tight text-white">Nenhum número é invenção do aplicativo</h2>
+        <p class="mb-8 leading-relaxed text-slate-400">
+          Essa é a regra que organiza o produto inteiro. Época de plantio, produtividade, preço e
+          manejo ou vêm de fonte pública com data, ou <strong class="text-white">não aparecem</strong>.
+          A fonte e o ano ficam escritos na tela, embaixo do número.
+        </p>
+        <div class="grid gap-5 sm:grid-cols-3">
+          <div class="fonte pl-4">
+            <p class="font-bold text-white">Ministério da Agricultura</p>
+            <p class="mt-1 text-sm text-slate-400">Zoneamento Agrícola de Risco Climático — a época de plantio, publicada por portaria, município a município.</p>
+          </div>
+          <div class="fonte pl-4">
+            <p class="font-bold text-white">IBGE</p>
+            <p class="mt-1 text-sm text-slate-400">Produção Agrícola Municipal — quanto a sua cidade colheu e a que preço vendeu.</p>
+          </div>
+          <div class="fonte pl-4">
+            <p class="font-bold text-white">Embrapa</p>
+            <p class="mt-1 text-sm text-slate-400">Sistemas de Produção — o manejo, e a previsão do tempo pela ClimAPI.</p>
+          </div>
+        </div>
+        <p class="mt-8 text-sm leading-relaxed text-slate-500">
+          A inteligência artificial entra só para <em>escrever</em>: ela redige em português de
+          conversa o que as fontes já dizem. Ela não decide e não cria número — cada valor que ela
+          escreve é conferido contra o texto de origem antes de chegar à tela.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIMITES -->
+  <section id="limites" class="px-6 py-20">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-4 text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terra">Honestidade</span>
+      </div>
+      <h2 class="mb-4 text-center text-3xl font-bold text-white">O que o Plantemo não faz</h2>
+      <p class="mb-10 text-center text-slate-400">
+        Preferimos dizer isto na primeira tela a você descobrir depois.
+      </p>
+      <div class="space-y-4">
+        <div class="card rounded-2xl p-6">
+          <p class="font-bold text-white">Não substitui um engenheiro agrônomo.</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-400">
+            É ferramenta de apoio. Os números contam o que já aconteceu na sua região; eles não
+            garantem o resultado da sua lavoura. Antes de investir, procure um profissional.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <p class="font-bold text-white">Não receita defensivo agrícola.</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-400">
+            Nem nome comercial, nem ingrediente ativo, nem dose. Receituário agronômico tem
+            exigência legal própria e cabe a quem tem registro para assinar.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <p class="font-bold text-white">Não calcula calagem nem adubação.</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-400">
+            Ele lê e explica o seu laudo de solo, mas não recomenda dose — isso depende de tabelas
+            que ainda não temos de fonte citável. Quando tivermos, entra.
+          </p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <p class="font-bold text-white">Nem toda cultura tem tudo.</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-400">
+            Algumas têm ficha completa; outras têm a época oficial e o manejo, mas não o prazo até
+            a colheita — porque o manual não informa. Quando falta, a tela diz que falta em vez de
+            preencher com um palpite.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAIXAR -->
+  <section id="baixar" class="px-6 py-20">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-brand">Baixar</span>
+      <h2 class="mb-6 text-3xl font-bold text-white">Em teste, chegando na Play Store</h2>
+      <p class="mb-8 leading-relaxed text-slate-400">
+        O Plantemo está em teste interno no Google Play. Quer entrar no grupo de teste e usar
+        antes de todo mundo? Escreva para a gente — a vaga é de graça e a gente quer ouvir o que
+        você achar.
+      </p>
+      <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <a href="mailto:contato@generaltecnologia.com?subject=Quero%20testar%20o%20Plantemo"
+           class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white transition">
+          Quero testar
+        </a>
+        <a href="/plantemo/privacidade"
+           class="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-slate-300 transition hover:border-white/20 hover:text-white">
+          Como cuidamos dos seus dados
+        </a>
+      </div>
+      <p class="mt-8 text-sm text-slate-500">Android. O iOS vem depois.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.06] px-6 py-10">
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+      <div class="flex items-center gap-2">
+        <img src="/plantemo/icon.png" alt="Plantemo" class="h-7 w-7 rounded-lg object-cover" />
+        <span class="text-sm font-bold text-white">Plantemo</span>
+      </div>
+      <p class="text-xs text-slate-600">
+        Um produto da P&amp;C Tec — Perdigão &amp; Carneiro Tecnologias LTDA<br class="hidden md:block">
+        CNPJ 68.508.547/0001-36 · Itabuna, Bahia · © 2026
+      </p>
+      <div class="flex gap-4">
+        <a href="/" class="text-xs text-slate-500 transition hover:text-white">P&amp;C Tec</a>
+        <a href="/plantemo/termos" class="text-xs text-slate-500 transition hover:text-white">Termos</a>
+        <a href="/plantemo/privacidade" class="text-xs text-slate-500 transition hover:text-white">Privacidade</a>
+        <a href="mailto:contato@generaltecnologia.com" class="text-xs text-slate-500 transition hover:text-white">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
