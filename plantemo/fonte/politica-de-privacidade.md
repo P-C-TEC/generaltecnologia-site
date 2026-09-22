@@ -58,6 +58,13 @@ desfazer.
 Sobre o **legítimo interesse**: ele é usado só nas duas últimas linhas, que servem à segurança do
 serviço e não a fins comerciais. Você pode se opor, pelo contato acima, e nós avaliamos o pedido.
 
+### Pagamento
+
+**Nós não vemos o seu cartão.** A assinatura é cobrada pela loja de aplicativos, que processa o
+pagamento e guarda os dados financeiros. Nós recebemos apenas a confirmação de que a assinatura
+está ativa, e o identificador que a loja usa para essa compra — nunca número de cartão, CPF de
+pagador ou dados bancários.
+
 ### Localização
 
 **A localização é lida apenas quando você marca a sua área no mapa, e nunca em segundo plano.** O

@@ -68,13 +68,22 @@ acontecer na sua conta. Avise-nos se desconfiar de uso indevido.
 
 ## 4. O que custa
 
-**4.1.** O Plantemo é **gratuito** nesta versão.
+**4.1. O Plantemo é um serviço pago, por assinatura.** Os planos, os preços e o que cada um
+inclui serão informados **dentro do aplicativo e no site, antes da contratação**, e nenhuma
+cobrança acontece sem que você escolha um plano e aceite expressamente.
 
-**4.2.** Caso passe a ser cobrado no futuro, você será avisado com **antecedência mínima de 30
-dias** e nada será cobrado sem que você aceite expressamente. Recursos que você já usava de graça
-não serão bloqueados retroativamente sem esse aviso.
+**4.2. Durante o período de teste, não há cobrança.** Quem participa do teste usa sem pagar. Ao
+fim do teste, você será avisado com **antecedência mínima de 30 dias** antes de qualquer cobrança
+começar, e continuará podendo usar sem pagar até decidir — ou encerrar a conta, se preferir.
 
-**4.3.** Para conter abuso, alguns recursos que consomem inteligência artificial têm **limite
+**4.3.** Assinaturas contratadas pela loja de aplicativos seguem também as regras de cobrança,
+renovação e cancelamento da própria loja, inclusive quanto a reembolso. O cancelamento é feito
+por lá, e vale até o fim do período já pago.
+
+**4.4.** Mudança de preço de um plano que você já assina só passa a valer na renovação seguinte,
+e você será avisado com **antecedência mínima de 30 dias** para poder cancelar antes.
+
+**4.5.** Para conter abuso, alguns recursos que consomem inteligência artificial têm **limite
 diário por conta**. O limite é generoso para uso normal e está declarado no aplicativo quando é
 atingido.
 
@@ -130,8 +139,8 @@ dado novo, e o dado antigo não vira obrigação nossa.
 
 **7.4.** Salvo nos casos de dolo, culpa grave ou dano decorrente de defeito do serviço, nossa
 responsabilidade total fica limitada ao valor que você tiver pago pelo Plantemo nos 12 meses
-anteriores ao fato — valor que, enquanto o aplicativo for gratuito, é zero. Esta limitação **não
-se aplica** a dano à integridade física, nem a qualquer hipótese em que a lei a proíba.
+anteriores ao fato. Esta limitação **não se aplica** a dano à integridade física, nem a qualquer
+hipótese em que a lei a proíba.
 
 **7.5. Nada nestes Termos afasta os direitos que a lei brasileira garante ao consumidor.**
 
