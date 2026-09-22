@@ -59,33 +59,15 @@ node plantemo/gerar-legais.mjs
 # 3. confira o diff e faça o commit das duas coisas juntas
 ```
 
-## O domínio plantemo.com.br
+## O domínio plantemo.com.br fica FORA deste projeto
 
-O produto tem domínio próprio, e ele aponta para **este mesmo projeto da Vercel**. Quem faz a
-ligação é a reescrita em `vercel.json`:
+A página em `/plantemo` continua aqui, no portfólio, como a do GTRestaurante. Mas o domínio
+próprio **não** aponta para este projeto: `plantemo.com.br` é um site de produto separado, mais
+completo, que mora no repositório do Plantemo, em `site/`, e tem projeto próprio na Vercel.
 
-```json
-{
-  "source": "/((?!plantemo/|brand/|robots\.txt|sitemap\.xml).*)",
-  "has": [{ "type": "host", "value": "(www\.)?plantemo\.com\.br" }],
-  "destination": "/plantemo/$1"
-}
-```
+É a mesma arquitetura do Mordomo Tec, que também tem domínio e site próprios e aparece aqui
+apenas como card do portfólio.
 
-Ela é **condicionada ao domínio**: `pectecs.com.br` não passa por ela e não pode quebrar por
-causa dela. Em `plantemo.com.br`, a raiz serve `/plantemo`, `/privacidade` serve
-`/plantemo/privacidade`, e assim por diante.
-
-Falta fazer, no painel da Vercel: adicionar `plantemo.com.br` e `www.plantemo.com.br` como
-domínios deste projeto e apontar o DNS. Depois disso, confira:
-
-| Endereço | Deve mostrar |
-| --- | --- |
-| `plantemo.com.br` | a página do Plantemo |
-| `plantemo.com.br/privacidade` | a política de privacidade |
-| `plantemo.com.br/termos` | os termos de uso |
-| `pectecs.com.br` | a home da P&C Tec, **sem mudança nenhuma** |
-| `pectecs.com.br/plantemo` | a mesma página do Plantemo |
-
-Se a reescrita não se comportar, apagar o bloco `rewrites` do `vercel.json` devolve tudo ao
-estado anterior — `plantemo.com.br` passa a mostrar a home institucional, e nada mais quebra.
+Uma reescrita condicionada ao host chegou a existir neste arquivo, para `plantemo.com.br` servir
+`/plantemo`. Ela foi removida quando a decisão mudou — deixá-la valendo faria o domínio próprio
+servir a página curta em vez do site do produto, e o erro seria silencioso.

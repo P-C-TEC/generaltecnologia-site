@@ -27,17 +27,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!plantemo/|brand/|robots\\.txt|sitemap\\.xml).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "(www\\.)?plantemo\\.com\\.br"
-        }
-      ],
-      "destination": "/plantemo/$1"
-    }
   ]
 }
