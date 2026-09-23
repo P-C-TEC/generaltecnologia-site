@@ -13,8 +13,8 @@
  *
  * COMO ATUALIZAR
  *
- *   1. copie os .md novos para plantemo/fonte/
- *   2. node plantemo/gerar-legais.mjs
+ *   1. copie os .md novos para scripts/plantemo/fonte/
+ *   2. node scripts/plantemo/gerar-legais.mjs   (grava as páginas em public/plantemo/)
  *   3. confira o diff e faça o commit das duas coisas juntas
  *
  * O conversor cobre só o Markdown que estes documentos usam: título, parágrafo, lista, tabela,
@@ -284,6 +284,7 @@ for (const peca of pecas) {
     .map((l) => '      ' + l)
     .join('\n');
 
-  writeFileSync(join(AQUI, peca.saida), pagina({ ...peca, corpo }), 'utf8');
-  console.log(`${peca.fonte} -> plantemo/${peca.saida}`);
+  // As páginas são publicadas a partir de public/plantemo; a fonte fica aqui, fora do ar
+  writeFileSync(join(AQUI, '..', '..', 'public', 'plantemo', peca.saida), pagina({ ...peca, corpo }), 'utf8');
+  console.log(`${peca.fonte} -> public/plantemo/${peca.saida}`);
 }

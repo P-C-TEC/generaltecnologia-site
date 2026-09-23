@@ -1,245 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>P&amp;C Tec — Tecnologia e Integração</title>
-  <meta name="description" content="P&C Tec (Perdigão & Carneiro Tecnologias LTDA) desenvolve produtos de software próprios: GTRestaurante, gestão para restaurantes com IA; Mordomo Tec, assistente pessoal no WhatsApp; e Plantemo, consultor de plantio para o pequeno produtor rural." />
-  <meta property="og:title" content="P&C Tec — Tecnologia e Integração" />
-  <meta property="og:description" content="Desenvolvemos produtos de software próprios. Conheça o GTRestaurante, o Mordomo Tec e o Plantemo." />
-  <meta property="og:image" content="https://pectecs.com.br/brand/pc-tec-logo.png" />
-  <link rel="icon" href="/brand/pc-tec-logo.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand: '#1C6DD0', 'brand-dark': '#0B1F3A' },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          animation: { 'fade-up': 'fadeUp 0.6s ease forwards' },
-          keyframes: { fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
-        }
-      }
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    .gradient-bg { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(28,109,208,0.18) 0%, transparent 60%), linear-gradient(180deg, #08111e 0%, #04080f 100%); }
-    .btn-primary { background: linear-gradient(135deg, #1C6DD0, #2E8FFF); box-shadow: 0 8px 32px -8px rgba(28,109,208,0.6); }
-    .btn-primary:hover { background: linear-gradient(135deg, #2E8FFF, #5AAAFF); box-shadow: 0 12px 40px -8px rgba(28,109,208,0.8); }
-    .text-gradient { background: linear-gradient(135deg, #2E8FFF, #8FC3FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .module-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
-    .module-card:hover { background: rgba(28,109,208,0.08); border-color: rgba(28,109,208,0.3); transform: translateY(-2px); }
-    .product-card { background: linear-gradient(180deg, rgba(19,31,53,0.9), rgba(7,12,23,0.9)); border: 1px solid rgba(255,255,255,0.08); }
-    .product-card.featured { border-color: rgba(28,109,208,0.5); box-shadow: 0 0 0 1px rgba(28,109,208,0.2), 0 32px 64px -16px rgba(28,109,208,0.3); }
-    .product-card.soon { opacity: 0.55; }
-    html { scroll-behavior: smooth; }
-  </style>
-</head>
-<body class="gradient-bg text-white font-sans antialiased">
-
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[rgba(4,8,15,0.85)] backdrop-blur-2xl">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="/" class="flex items-center gap-2.5">
-        <img src="/brand/pc-tec-logo-white.png" alt="P&amp;C" class="h-8 w-auto object-contain" />
-        <span class="text-base font-bold text-white">Tec</span>
-      </a>
-      <div class="hidden items-center gap-8 md:flex">
-        <a href="#produtos" class="text-sm text-slate-400 hover:text-white transition">Produtos</a>
-        <a href="#sobre" class="text-sm text-slate-400 hover:text-white transition">Sobre</a>
-        <a href="#contato" class="text-sm text-slate-400 hover:text-white transition">Contato</a>
-      </div>
-      <a href="#produtos"
-         class="btn-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition">
-        Ver os produtos
-        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="pt-32 pb-24 px-6 text-center">
-    <div class="mx-auto max-w-4xl">
-      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5 text-xs font-semibold text-brand">
-        <span class="h-1.5 w-1.5 rounded-full bg-brand animate-pulse"></span>
-        Empresa de tecnologia • produtos próprios com IA
-      </div>
-      <h1 class="mb-6 text-5xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-        Criamos software<br>que resolve<br>
-        <span class="text-gradient">problemas reais.</span>
-      </h1>
-      <p class="mx-auto mb-10 max-w-2xl text-lg text-slate-400 leading-relaxed">
-        A P&amp;C Tec desenvolve produtos de software próprios, com inteligência
-        artificial integrada desde o primeiro dia. O
-        <strong class="text-white">GTRestaurante</strong> transforma a gestão de restaurantes, o
-        <strong class="text-white">Mordomo Tec</strong> organiza a vida de casa pelo WhatsApp e o
-        <strong class="text-white">Plantemo</strong> ajuda quem planta a decidir com fonte oficial
-        — e é apenas o começo.
-      </p>
-      <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <a href="#produtos"
-           class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white transition">
-          Ver os produtos
-          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-        <a href="#sobre"
-           class="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-slate-300 hover:border-white/20 hover:text-white transition">
-          Conhecer a empresa
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="produtos" class="py-20 px-6">
-    <div class="mx-auto max-w-5xl">
-      <div class="mb-4 text-center">
-        <span class="text-xs font-semibold uppercase tracking-widest text-brand">Nossos produtos</span>
-      </div>
-      <h2 class="mb-4 text-center text-3xl font-bold text-white">Um portfólio que está apenas começando</h2>
-      <p class="mb-12 text-center text-slate-400">Três produtos no ar, cada um resolvendo um tipo de rotina. Outros já estão no radar.</p>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- GTRestaurante -->
-        <div class="product-card featured rounded-2xl p-8 relative flex flex-col">
-          <div class="absolute -top-3 left-8">
-            <span class="rounded-full bg-brand px-3 py-1 text-[11px] font-bold text-white">Disponível agora</span>
-          </div>
-          <div class="mb-4 flex items-center gap-3">
-            <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-brand/30">
-              <img src="https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png" alt="GTRestaurante" class="h-full w-full object-cover" />
-            </div>
-            <h3 class="text-xl font-bold text-white">GTRestaurante</h3>
-          </div>
-          <p class="mb-6 flex-1 text-sm text-slate-400 leading-relaxed">
-            Gestão completa para restaurantes: CMV, checklists operacionais, estoque,
-            financeiro, equipe, eventos, delivery e relatórios com IA — tudo em uma
-            plataforma só, com assistente inteligente incluído.
-          </p>
-          <a href="/gtrestaurante/"
-             class="btn-primary inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition">
-            Conhecer o produto
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-        <!-- Mordomo Tec -->
-        <div class="product-card featured rounded-2xl p-8 relative flex flex-col">
-          <div class="absolute -top-3 left-8">
-            <span class="rounded-full bg-brand px-3 py-1 text-[11px] font-bold text-white">Disponível agora</span>
-          </div>
-          <div class="mb-4 flex items-center gap-3">
-            <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-brand/30">
-              <img src="https://mordomotec.com.br/icon-512.png" alt="Mordomo Tec" class="h-full w-full object-cover" />
-            </div>
-            <h3 class="text-xl font-bold text-white">Mordomo Tec</h3>
-          </div>
-          <p class="mb-6 flex-1 text-sm text-slate-400 leading-relaxed">
-            Assistente pessoal para a vida de casa, direto no WhatsApp: finanças,
-            compromissos, documentos, saúde, carro e compras organizados por IA
-            só de conversar — sem precisar aprender a usar um app novo.
-          </p>
-          <a href="https://mordomotec.com.br"
-             class="btn-primary inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition">
-            Conhecer o produto
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-        <!-- Plantemo -->
-        <div class="product-card featured rounded-2xl p-8 relative flex flex-col">
-          <div class="absolute -top-3 left-8">
-            <span class="rounded-full bg-brand px-3 py-1 text-[11px] font-bold text-white">Em teste</span>
-          </div>
-          <div class="mb-4 flex items-center gap-3">
-            <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-brand/30">
-              <img src="/plantemo/icon.png" alt="Plantemo" class="h-full w-full object-cover" />
-            </div>
-            <h3 class="text-xl font-bold text-white">Plantemo</h3>
-          </div>
-          <p class="mb-6 flex-1 text-sm text-slate-400 leading-relaxed">
-            Consultor de plantio de bolso para o pequeno produtor rural: época oficial do
-            zoneamento, quanto a cidade dele costuma colher segundo o IBGE e o passo a passo de
-            cultivo da Embrapa — com a fonte escrita na tela e sem inventar número.
-          </p>
-          <a href="/plantemo/"
-             class="btn-primary inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition">
-            Conhecer o produto
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="sobre" class="py-20 px-6">
-    <div class="mx-auto max-w-4xl">
-      <div class="rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/10 via-transparent to-transparent p-10 lg:p-14">
-        <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-brand">Sobre a empresa</span>
-        <h2 class="mb-6 text-3xl font-bold text-white leading-tight">Tecnologia própria, do jeito certo</h2>
-        <div class="grid gap-8 lg:grid-cols-2">
-          <p class="text-slate-400 leading-relaxed">
-            A <strong class="text-white">P&amp;C Tec</strong> é a marca de produtos digitais da
-            <strong class="text-white">Perdigão &amp; Carneiro Tecnologias LTDA</strong>. Construímos
-            software com inteligência artificial integrada para resolver problemas
-            operacionais reais — começando pelo setor de restaurantes, com o
-            GTRestaurante, e expandindo para novos mercados ao longo do tempo.
-          </p>
-          <p class="text-slate-400 leading-relaxed">
-            Acreditamos em produtos enxutos, bem construídos e que efetivamente ajudam
-            quem usa no dia a dia — sem excesso de recursos que ninguém usa, e com IA
-            aplicada de forma prática, não como enfeite.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contato" class="py-20 px-6">
-    <div class="mx-auto max-w-2xl text-center">
-      <span class="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-brand">Contato</span>
-      <h2 class="mb-6 text-3xl font-bold text-white">Fale com a gente</h2>
-      <p class="mb-8 text-slate-400">
-        Dúvidas sobre o GTRestaurante, parcerias ou imprensa? Escreva para a gente.
-      </p>
-      <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        <a href="mailto:contato@generaltecnologia.com"
-           class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white transition">
-          contato@generaltecnologia.com
-        </a>
-        <a href="mailto:vendas@generaltecnologia.com"
-           class="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-slate-300 hover:border-white/20 hover:text-white transition">
-          vendas@generaltecnologia.com
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/[0.06] py-10 px-6">
-    <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
-      <div class="flex items-center gap-1.5">
-        <img src="/brand/pc-tec-logo-white.png" alt="P&amp;C" class="h-6 w-auto object-contain" />
-        <span class="text-sm font-bold text-white">Tec</span>
-      </div>
-      <p class="text-xs text-slate-600">
-        Perdigão &amp; Carneiro Tecnologias LTDA — CNPJ 68.508.547/0001-36<br class="hidden md:block">
-        © 2026. Todos os direitos reservados.
-      </p>
-      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start">
-        <a href="/gtrestaurante/" class="text-xs text-slate-500 hover:text-white transition">GTRestaurante</a>
-        <a href="https://mordomotec.com.br" class="text-xs text-slate-500 hover:text-white transition">Mordomo Tec</a>
-        <a href="/plantemo/" class="text-xs text-slate-500 hover:text-white transition">Plantemo</a>
-        <a href="mailto:contato@generaltecnologia.com" class="text-xs text-slate-500 hover:text-white transition">Contato</a>
-        <a href="/gtrestaurante/termos" class="text-xs text-slate-500 hover:text-white transition">Termos (GTRestaurante)</a>
-        <a href="/gtrestaurante/privacidade" class="text-xs text-slate-500 hover:text-white transition">Privacidade (GTRestaurante)</a>
-        <a href="https://mordomotec.com.br/termos-de-uso" class="text-xs text-slate-500 hover:text-white transition">Termos (Mordomo Tec)</a>
-        <a href="https://mordomotec.com.br/politica-de-privacidade" class="text-xs text-slate-500 hover:text-white transition">Privacidade (Mordomo Tec)</a>
-        <a href="/plantemo/termos" class="text-xs text-slate-500 hover:text-white transition">Termos (Plantemo)</a>
-        <a href="/plantemo/privacidade" class="text-xs text-slate-500 hover:text-white transition">Privacidade (Plantemo)</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P&amp;C Tec — Tecnologia e Integração</title>
+    <meta name="description" content="A P&amp;C Tec desenvolve sistemas sob encomenda, cria sites e tem produtos próprios com inteligência artificial integrada." />
+    <meta name="theme-color" content="#F2F1F0" />
+    <link rel="canonical" href="https://pectecs.com.br/" />
+    <!-- Prévia do link no WhatsApp, LinkedIn e redes -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="P&amp;C Tec" />
+    <meta property="og:url" content="https://pectecs.com.br/" />
+    <meta property="og:title" content="P&amp;C Tec — Tecnologia e Integração" />
+    <meta property="og:description" content="Sistemas sob encomenda, web design e produtos próprios com inteligência artificial." />
+    <meta property="og:image" content="https://pectecs.com.br/brand/og-pc-tec.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icones/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/icones/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/icones/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="P&amp;C Tec" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/b/main.tsx"></script>
+  </body>
 </html>

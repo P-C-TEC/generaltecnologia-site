@@ -1,0 +1,5 @@
+# Não sobem para a Vercel: material bruto e de teste, que não faz parte do site
+capturas/
+teste/
+dist/
+.env*
