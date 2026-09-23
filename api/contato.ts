@@ -144,16 +144,22 @@ export async function POST(request: Request) {
     return resposta(503, { erro: 'O envio pelo site está indisponível no momento.' })
   }
 
+  // O Google mostra a senha de app em grupos de 4 separados por espaço ("abcd efgh ..."), mas ela
+  // não tem espaços; e colar no painel às vezes traz espaço ou quebra de linha junto
+  const usuario = SMTP_USER.trim()
+  const senha = SMTP_PASS.replace(/\s+/g, '')
+  const para = (CONTATO_PARA || PARA_PADRAO).trim()
+
   try {
     const transporte = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
       secure: true,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
+      auth: { user: usuario, pass: senha },
     })
     await transporte.sendMail({
-      from: { name: 'Site P&C Tec', address: SMTP_USER },
-      to: CONTATO_PARA || PARA_PADRAO,
+      from: { name: 'Site P&C Tec', address: usuario },
+      to: para,
       replyTo: { name: dados.nome, address: dados.email },
       subject: assunto,
       text: texto,
