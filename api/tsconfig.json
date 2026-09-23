@@ -1,0 +1,9 @@
+{
+  // A Vercel verifica cada função com o tsconfig mais próximo dela. Sem este arquivo ela usaria
+  // o da raiz, que não inclui os tipos do Node (Buffer, process, node:crypto).
+  "extends": "../tsconfig.node.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "../node_modules/.tmp/tsconfig.api.tsbuildinfo"
+  },
+  "include": ["./**/*.ts"]
+}
