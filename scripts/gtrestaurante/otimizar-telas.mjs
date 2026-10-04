@@ -21,10 +21,6 @@ for (const nome of ['painel', 'estoque']) {
   await sharp(`${ORIGEM}/desk-${nome}.png`).extract(recorteDesk).resize({ width: 960, height: 600 }).webp({ quality: 78 }).toFile(`${DESTINO}/telas/desk-${nome}-960.webp`)
 }
 
-// Assistente: só o chat e as pendências (o topo da captura traz o aviso "IA não retornou
-// relatório estruturado", um erro do app que não deve ir para a página de vendas).
-await sharp(`${ORIGEM}/desk-assistente.png`).extract({ left: 1100, top: 440, width: 1750, height: 1342 }).resize({ width: 1200 }).webp({ quality: 80 }).toFile(`${DESTINO}/telas/desk-assistente-recorte.webp`)
-
 // Celular (780 × 1688): mantém o cabeçalho e tira o cartão "Resumo do dia" logo abaixo dele.
 async function celular(nome) {
   const arq = `${ORIGEM}/cel-${nome}.png`
@@ -35,7 +31,6 @@ async function celular(nome) {
     .webp({ quality: 80 })
     .toFile(`${DESTINO}/telas/cel-${nome}-750.webp`)
 }
-await celular('painel')
 await celular('assistente')
 
 // Imagem de compartilhamento (WhatsApp, redes): 1200 × 630.
