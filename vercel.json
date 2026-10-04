@@ -21,7 +21,7 @@
       ]
     },
     {
-      "source": "/((?!gtrestaurante|plantemo).*)",
+      "source": "/((?!plantemo).*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "source": "/(gtrestaurante|plantemo)(.*)",
+      "source": "/plantemo(.*)",
       "headers": [
         {
           "key": "Strict-Transport-Security",

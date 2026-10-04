@@ -15,13 +15,15 @@ horizontal. As páginas de produto e as legais continuam estáticas em `public/`
 - `index.html` + `src/` — a home.
 - `privacidade.html` — política de privacidade do site (formulário de contato).
 - `api/contato.ts` e `api/desafio.ts` — funções da Vercel do formulário de contato (ver abaixo).
-- `public/gtrestaurante/` — página de vendas do GTRestaurante, termos e privacidade.
+- `public/gtrestaurante/` — página de vendas do GTRestaurante (HTML, `gtr.css` e `gtr.js` próprios, sem
+  framework), termos e privacidade (gerados, ver abaixo) e as telas do app em `telas/`.
 - `public/plantemo/` — página do Plantemo, termos e privacidade (as legais são geradas, ver abaixo).
 - `public/brand/` — logos e os manuais de identidade (os manuais ficam fora da busca pelo
   `robots.txt`: não são segredo, mas não são linkados de lugar nenhum).
 - `public/robots.txt` e `public/sitemap.xml` — busca.
 - `vercel.json` — build, `cleanUrls` e os **cabeçalhos de segurança** (ver Segurança).
-- `scripts/` — ferramentas locais (imagens, logo, ícones, testes de tela, páginas do Plantemo).
+- `scripts/` — ferramentas locais (imagens, logo, ícones, testes de tela, páginas do Plantemo e do
+  GTRestaurante).
 
 ## Comandos
 
@@ -35,6 +37,9 @@ node scripts/otimizar-imagens.mjs    # converte as capturas usadas para WebP em 
 node scripts/vetorizar-logo.mjs      # redesenha a logo em src/b/logoVetor.ts (ver "Marca")
 node scripts/gerar-icones.mjs        # SVGs da logo e ícones quadrados (aba e tela inicial)
 node scripts/plantemo/gerar-legais.mjs   # páginas legais do Plantemo a partir do Markdown
+node scripts/gtrestaurante/capturar-app.mjs [perfil]   # telas internas do app (conta demo; ver abaixo)
+node scripts/gtrestaurante/otimizar-telas.mjs         # telas, imagem de compartilhamento e ícones
+node scripts/gtrestaurante/gerar-legais.mjs           # termos e privacidade do GTRestaurante
 ```
 
 ## Indexação
@@ -85,11 +90,12 @@ Sem elas, o formulário avisa que o envio está indisponível e mostra o e-mail 
 - Cabeçalhos no `vercel.json`: CSP rígida no site (`script-src 'self'`, sem script inline); CSP
   própria, mais aberta, só em `/gtrestaurante` e `/plantemo` (usam Tailwind por CDN); HSTS,
   X-Frame-Options, nosniff, COOP, Referrer-Policy, Permissions-Policy. Ao acrescentar recurso
-  externo novo, a CSP precisa acompanhar, senão ele é bloqueado em silêncio.
+  externo novo, a CSP precisa acompanhar, senão ele é bloqueado em silêncio. Desde 04/10/2026 o
+  `/gtrestaurante` também usa a CSP rígida; a mais aberta ficou só para `/plantemo`.
 - `api/contato.ts`: validação estrita (o e-mail vira o "responder para"), todo texto do visitante
   escapado no HTML do e-mail, e os logs não gravam dados do visitante.
-- Pendência conhecida: as páginas de produto usam o Tailwind "Play CDN", que o próprio Tailwind
-  não recomenda para produção; o ideal é compilar esse CSS.
+- Pendência conhecida: as páginas do Plantemo usam o Tailwind "Play CDN", que o próprio Tailwind
+  não recomenda para produção; o ideal é compilar esse CSS (o GTRestaurante já saiu dele).
 
 ## Marca
 
@@ -119,3 +125,30 @@ node scripts/plantemo/gerar-legais.mjs
 
 # 3. confira o diff e faça o commit das duas coisas juntas
 ```
+
+## GTRestaurante
+
+A página de vendas (`public/gtrestaurante/`) é estática: HTML, `gtr.css` e `gtr.js`, sem script
+inline, para caber na CSP rígida. Visual da P&C Tec (fundo claro, Quantico, botões chanfrados)
+com o laranja e o escuro do app. A hero é um mosaico de cartões com entrada animada; descendo, as
+animações seguem referências de naocodei.com/free-code (cartões que empilham, galeria horizontal,
+texto que se preenche, odômetro, linha do tempo). Com "reduzir movimento" ligado, tudo fica parado.
+
+**Telas do app.** São capturas reais de uma conta de demonstração com dados fictícios
+("Bistrô Exemplo"). `scripts/gtrestaurante/capturar-app.mjs` abre o Chromium, espera o login (feito
+por uma pessoa: o script nunca vê a senha), cadastra os dados com `popular-demo.js` se o estoque
+estiver vazio e fotografa as telas em `capturas/app/`. Cuidados aprendidos:
+
+- na conta demo, **sair da conta apaga os dados**; com `ZERAR=1` o script sai de propósito, para
+  recomeçar do zero;
+- o app volta à tela "Configure seu Restaurante" a cada carregamento, mas os cadastros ficam: rodar
+  o cadastro duas vezes duplica tudo;
+- com o service worker do app ativo, recarregar a página no Chromium do Playwright deixa a tela em
+  branco; o script bloqueia o service worker.
+
+Depois, `otimizar-telas.mjs` gera os WebP (cortando a barra de rolagem e o aviso "IA não retornou
+relatório estruturado" que o app mostra no painel).
+
+**Termos e privacidade** vêm do próprio app (`?legal=terms` e `?legal=privacy`), copiados para
+`scripts/gtrestaurante/fonte/` com os e-mails do GTRestaurante (`suportegtrestaurante@` e
+`privacidadegtr@generaltecnologia.com`). Para atualizar, edite os `.md` e rode `gerar-legais.mjs`.
