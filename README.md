@@ -85,8 +85,11 @@ Sem elas, o formulário avisa que o envio está indisponível e mostra o e-mail 
 
 ## Segurança (auditoria de 23/09/2026)
 
-- Dependências publicadas: `npm audit --omit=dev` sem vulnerabilidades. As 5 moderadas de
-  `npm audit` estão no `phin`, usado só pelo `potrace` (ferramenta local de vetorizar a logo).
+- Dependências: `npm audit` sem vulnerabilidades, inclusive nas de desenvolvimento (revisado em
+  05/10/2026). O `phin` usado pelo `potrace` (ferramenta local de vetorizar a logo) é forçado para
+  a versão corrigida em `overrides` no `package.json`; a logo gerada não muda.
+- A `main` é protegida: mudanças só entram por pull request, com o deploy da Vercel e o CodeQL
+  aprovados. Nada de envio direto na `main`.
 - Cabeçalhos no `vercel.json`: CSP rígida no site (`script-src 'self'`, sem script inline); CSP
   própria, mais aberta, só em `/gtrestaurante` e `/plantemo` (usam Tailwind por CDN); HSTS,
   X-Frame-Options, nosniff, COOP, Referrer-Policy, Permissions-Policy. Ao acrescentar recurso
