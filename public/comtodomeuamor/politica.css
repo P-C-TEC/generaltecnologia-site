@@ -1,0 +1,103 @@
+/* Os poucos estilos que só a política usa.
+ *
+ * O resto vem de pagina.css, para que as duas páginas do produto tenham a
+ * mesma cara e um ajuste de cor valha para as duas. */
+
+.folha {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px clamp(20px, 5vw, 36px) 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.folha header {
+  margin-bottom: 52px;
+}
+
+.folha .marca {
+  font-family: var(--carta);
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin: 0 0 22px;
+  display: block;
+}
+
+.folha h1 {
+  font-family: var(--carta);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.resumo {
+  color: var(--texto-suave);
+  font-size: clamp(16px, 2vw, 19px);
+  margin: 0;
+}
+
+.atualizacao {
+  color: var(--texto-apagado);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  margin-top: 26px;
+}
+
+.destaque {
+  border: 1px solid rgba(166, 159, 205, 0.28);
+  border-radius: 18px;
+  background: var(--superficie);
+  padding: 26px 28px;
+  margin: 0 0 50px;
+}
+.destaque p {
+  margin: 0;
+  color: var(--texto);
+}
+
+.folha section {
+  margin: 0 0 42px;
+}
+
+.folha h2 {
+  font-family: var(--interface);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.folha h2::before {
+  content: '';
+  flex: 0 0 18px;
+  height: 1px;
+  background: var(--lavanda);
+  transform: translateY(-6px);
+}
+
+.folha section p {
+  color: var(--texto-suave);
+  margin: 0;
+}
+
+.folha footer {
+  border-top: 1px solid rgba(237, 237, 237, 0.1);
+  margin-top: 60px;
+  padding-top: 26px;
+  color: var(--texto-apagado);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.folha footer a {
+  color: var(--lavanda);
+}
+
+@media (max-width: 560px) {
+  .folha h2::before {
+    display: none;
+  }
+}

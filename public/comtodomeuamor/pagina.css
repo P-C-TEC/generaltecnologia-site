@@ -1,0 +1,466 @@
+/* A página do "Com todo meu amor…" dentro do site da P&C Tec.
+ *
+ * A identidade aqui é a do aplicativo, e não a do site — do mesmo jeito que as
+ * páginas do Plantemo e do GTRestaurante têm a cara dos seus produtos. O que
+ * costura tudo é o cabeçalho de volta e o rodapé da empresa.
+ *
+ * O tema é o "Crepúsculo": azul noturno, branco gelo, ouro envelhecido e
+ * lavanda. Nada de claro — este produto trata de luto, e a tela acesa de
+ * madrugada não pode agredir quem a olha. */
+
+:root {
+  --fundo: #121826;
+  --superficie: #1e1e24;
+  --superficie-alta: #272730;
+  --texto: #ededed;
+  --texto-suave: rgba(237, 237, 237, 0.72);
+  --texto-apagado: rgba(237, 237, 237, 0.42);
+  --ouro: #d4af37;
+  --lavanda: #a69fcd;
+  --interface: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --carta: 'Lora', Georgia, 'Times New Roman', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* O cabeçalho é fixo; âncoras precisam parar abaixo dele. */
+  scroll-padding-top: 86px;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--interface);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* O céu fica atrás de tudo, fixo, e acompanha a rolagem sem se mexer junto:
+ * é o mesmo truque do aplicativo, onde as estrelas não piscam nem deslizam. */
+#ceu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--lavanda);
+  text-decoration: none;
+}
+a:hover,
+a:focus-visible {
+  color: var(--texto);
+}
+:focus-visible {
+  outline: 2px solid var(--lavanda);
+  outline-offset: 3px;
+}
+
+/* --- Cabeçalho ----------------------------------------------------------- */
+
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px clamp(20px, 5vw, 56px);
+  background: linear-gradient(to bottom, rgba(18, 24, 38, 0.92), rgba(18, 24, 38, 0));
+  backdrop-filter: blur(6px);
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.marca:hover {
+  color: var(--texto);
+}
+.marca-volta {
+  transition: transform 0.25s ease;
+}
+.marca:hover .marca-volta {
+  transform: translateX(-4px);
+}
+
+.menu {
+  display: flex;
+  gap: clamp(14px, 3vw, 34px);
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+.menu a {
+  color: var(--texto-suave);
+}
+.menu a:hover {
+  color: var(--texto);
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 120px clamp(20px, 5vw, 56px) clamp(48px, 8vh, 96px);
+}
+
+.selo {
+  margin: 0 0 clamp(20px, 4vh, 40px);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ouro);
+}
+
+.titulo-gigante {
+  margin: 0;
+  font-family: var(--carta);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 9vw, 8.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--texto);
+  max-width: 14ch;
+}
+
+.hero-abaixo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(24px, 5vw, 64px);
+  margin-top: clamp(28px, 5vh, 56px);
+}
+
+.hero-texto {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--texto-suave);
+  font-size: clamp(15px, 1.6vw, 19px);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 10px 10px 26px;
+  border-radius: 999px;
+  background: var(--ouro);
+  color: #1a1206;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: gap 0.25s ease;
+}
+.botao:hover {
+  gap: 20px;
+  color: #1a1206;
+}
+.botao-circulo {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--fundo);
+  color: var(--ouro);
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+.botao:hover .botao-circulo {
+  transform: translateY(3px);
+}
+
+/* --- Seções -------------------------------------------------------------- */
+
+.secao {
+  padding: clamp(80px, 14vh, 180px) clamp(20px, 5vw, 56px);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.rotulo {
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lavanda);
+}
+
+.titulo-medio {
+  margin: 0 0 clamp(28px, 5vh, 56px);
+  font-family: var(--carta);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4.2vw, 3.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+.titulo-medio em {
+  font-style: italic;
+  color: var(--ouro);
+}
+
+/* O texto que se revela conforme a página rola. Cada palavra começa apagada e
+ * acende quando chega perto do meio da tela — devagar, como quem lê em voz
+ * baixa. */
+.texto-revelado {
+  margin: 0;
+  max-width: 62ch;
+  font-size: clamp(16px, 1.8vw, 21px);
+  line-height: 1.75;
+  color: var(--texto);
+}
+.texto-revelado .p {
+  opacity: 0.18;
+  transition: opacity 0.5s ease;
+}
+.texto-revelado .p.acesa {
+  opacity: 1;
+}
+
+/* --- Os tres lugares --------------------------------------------------- */
+
+.telas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.lugar {
+  background: var(--superficie);
+  border: 1px solid rgba(237, 237, 237, 0.06);
+  border-radius: 22px;
+  padding: clamp(26px, 3vw, 38px);
+}
+
+/* Os desenhos sao do proprio aplicativo: a parede de cartoes, o envelope com o
+ * coracao do gesto de concluir, e o circulo que guia a respiracao. Sao
+ * vetores nossos, feitos aqui -- nenhuma imagem de terceiro entra nesta
+ * pagina. */
+.lugar-desenho {
+  display: block;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 22px;
+  fill: none;
+  stroke: var(--lavanda);
+  stroke-width: 1.6;
+  opacity: 0.9;
+}
+.lugar-desenho .ouro {
+  stroke: var(--ouro);
+  fill: rgba(212, 175, 55, 0.12);
+}
+.lugar-desenho .cheio {
+  fill: rgba(166, 159, 205, 0.22);
+  stroke: var(--lavanda);
+}
+.lugar-desenho .pulso {
+  opacity: 0.45;
+}
+.lugar-desenho .pulso.devagar {
+  opacity: 0.2;
+}
+.lugar-desenho .brilho {
+  fill: var(--texto);
+  stroke: none;
+  opacity: 0.5;
+}
+
+.lugar h3 {
+  margin: 0 0 12px;
+  font-family: var(--carta);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--texto);
+}
+.lugar p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* --- O que ele não faz --------------------------------------------------- */
+
+.recusas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2px;
+}
+.recusas li {
+  background: var(--superficie);
+  padding: clamp(24px, 3vw, 36px);
+}
+.recusas li:first-child {
+  border-top-left-radius: 20px;
+}
+.recusas li:last-child {
+  border-bottom-right-radius: 20px;
+}
+.recusas h3 {
+  margin: 0 0 12px;
+  font-family: var(--carta);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--texto);
+}
+.recusas p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* --- Fecho --------------------------------------------------------------- */
+
+.fecho {
+  text-align: center;
+  padding-bottom: clamp(60px, 10vh, 120px);
+}
+.assinatura {
+  margin: 0 0 20px;
+  font-family: var(--carta);
+  font-style: italic;
+  font-size: clamp(1.5rem, 4vw, 2.6rem);
+  color: var(--ouro);
+}
+.fecho-texto {
+  margin: 0 auto;
+  max-width: 54ch;
+  color: var(--texto-suave);
+}
+
+/* --- Rodapé -------------------------------------------------------------- */
+
+.rodape {
+  border-top: 1px solid rgba(237, 237, 237, 0.08);
+  padding: 36px clamp(20px, 5vw, 56px) 48px;
+  color: var(--texto-apagado);
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: center;
+}
+.rodape p {
+  margin: 0 0 8px;
+}
+.rodape-links a {
+  color: var(--texto-apagado);
+}
+.rodape-links a:hover {
+  color: var(--texto);
+}
+
+/* --- Entradas ------------------------------------------------------------ */
+
+[data-surge],
+[data-cartao],
+.palavra {
+  opacity: 0;
+}
+
+.surgiu {
+  animation: surgir 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.cartao-entrou {
+  animation: cartaoEntrar 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.palavra.subiu {
+  animation: subir 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.palavra {
+  display: inline-block;
+  white-space: pre;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes cartaoEntrar {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Quem pediu menos movimento ao sistema recebe a página inteira parada. Num
+ * produto sobre luto isso não é detalhe de acessibilidade: movimento demais
+ * atrapalha quem já está sobrecarregado. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-surge],
+  [data-cartao],
+  .palavra {
+    opacity: 1;
+    animation: none !important;
+    transform: none !important;
+  }
+  .texto-revelado .p {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-abaixo {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .menu {
+    display: none;
+  }
+}
