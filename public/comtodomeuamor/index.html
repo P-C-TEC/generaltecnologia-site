@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Com todo meu amor… — um lugar para o que ficou por dizer</title>
+<meta name="description" content="Aplicativo gratuito de luto da P&amp;C Tec. Escreva, grave a sua voz e guarde fotos para quem partiu. Tudo fica criptografado no seu aparelho: não há conta, não há servidor, não há nuvem." />
+<link rel="canonical" href="https://pectecs.com.br/comtodomeuamor" />
+<meta property="og:title" content="Com todo meu amor… — um lugar para o que ficou por dizer" />
+<meta property="og:description" content="Um aplicativo de luto, gratuito, que não fala com a internet. O que você escrever fica criptografado no seu aparelho, e em nenhum outro lugar." />
+<meta property="og:url" content="https://pectecs.com.br/comtodomeuamor" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/comtodomeuamor/icone.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/comtodomeuamor/pagina.css" />
+</head>
+<body>
+
+<!-- O céu. É o mesmo do aplicativo: cada carta guardada vira uma estrela. -->
+<canvas id="ceu" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="/">
+    <span class="marca-volta" aria-hidden="true">←</span>
+    <span>P&amp;C Tec</span>
+  </a>
+  <nav class="menu">
+    <a href="#oque">O que é</a>
+    <a href="#telas">Por dentro</a>
+    <a href="#recusa">O que ele não faz</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <p class="selo" data-surge>Aplicativo gratuito · Android</p>
+    <h1 class="titulo-gigante" data-palavras>Com todo meu amor…</h1>
+    <div class="hero-abaixo">
+      <p class="hero-texto" data-surge data-atraso="400">
+        Um lugar reservado para escrever, gravar a sua voz e guardar fotos de quem
+        partiu. O que você disser aqui fica criptografado no seu aparelho — e em
+        nenhum outro lugar do mundo.
+      </p>
+      <a class="botao" href="#oque" data-surge data-atraso="600">
+        <span>Conhecer</span>
+        <span class="botao-circulo" aria-hidden="true">↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. O que é: texto que se revela conforme a pessoa rola -->
+  <section class="secao" id="oque">
+    <p class="rotulo" data-surge>O que é</p>
+    <h2 class="titulo-medio" data-palavras>
+      Quando alguém morre, <em>fica sempre</em> alguma coisa por dizer.
+    </h2>
+    <p class="texto-revelado" data-revelar>
+      O Com todo meu amor… existe para esse resto. Você escreve a carta que não
+      teve como entregar, grava a voz contando o dia que ele teria gostado de
+      ouvir, guarda a foto que achou numa gaveta. Ao concluir, o que você
+      escreveu se dissolve na tela e fica guardado — não some, se recolhe. Com o
+      tempo, o mural vai se enchendo, e o céu ao fundo ganha uma estrela a cada
+      carta.
+    </p>
+  </section>
+
+  <!-- 3. Por dentro -->
+  <section class="secao" id="telas">
+    <p class="rotulo" data-surge>Por dentro</p>
+    <h2 class="titulo-medio" data-palavras>Três lugares, e nenhum deles cobra nada de você.</h2>
+
+    <div class="telas">
+      <article class="lugar" data-cartao>
+        <svg class="lugar-desenho" viewBox="0 0 120 120" aria-hidden="true">
+          <rect x="18" y="26" width="38" height="30" rx="4" />
+          <rect x="64" y="26" width="38" height="46" rx="4" />
+          <rect x="18" y="64" width="38" height="30" rx="4" />
+          <rect x="64" y="80" width="38" height="14" rx="4" />
+          <circle class="brilho" cx="96" cy="18" r="2" />
+          <circle class="brilho" cx="26" cy="106" r="1.6" />
+          <circle class="brilho" cx="60" cy="14" r="1.2" />
+        </svg>
+        <h3>O Mural da Saudade</h3>
+        <p>
+          Tudo o que você guardou, em cartões. As fotos de uma mesma memória
+          viram um mosaico; as datas aparecem por extenso, porque quem relê uma
+          carta quer saber o dia exato. Ao fundo, o céu ganha uma estrela a
+          cada carta guardada.
+        </p>
+      </article>
+
+      <article class="lugar" data-cartao data-atraso="150">
+        <svg class="lugar-desenho" viewBox="0 0 120 120" aria-hidden="true">
+          <rect x="22" y="40" width="76" height="50" rx="5" />
+          <path d="M22 44 L60 70 L98 44" />
+          <path class="ouro" d="M60 36 c-5-9-18-6-18 3 0 7 9 12 18 20 9-8 18-13 18-20 0-9-13-12-18-3 Z" />
+          <circle class="brilho" cx="60" cy="16" r="2" />
+          <circle class="brilho" cx="84" cy="24" r="1.3" />
+          <circle class="brilho" cx="36" cy="22" r="1.3" />
+        </svg>
+        <h3>O Refúgio</h3>
+        <p>
+          Onde você escreve, grava a voz e anexa as fotos. Quando falta como
+          começar, uma frase aparece sugerida — e some assim que você escreve a
+          sua. Ao concluir, a carta se dissolve na tela e sobe como uma luz.
+        </p>
+      </article>
+
+      <article class="lugar" data-cartao data-atraso="300">
+        <svg class="lugar-desenho" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="16" class="cheio" />
+          <circle cx="60" cy="60" r="28" class="pulso" />
+          <circle cx="60" cy="60" r="40" class="pulso devagar" />
+        </svg>
+        <h3>O Toque de Conforto</h3>
+        <p>
+          Para quando o peito apertar às três da manhã. O aparelho bate como um
+          coração, ou guia a respiração num ritmo lento, até o corpo
+          desacelerar. Sem conta, sem texto, sem nada para preencher.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. O que ele não faz -->
+  <section class="secao" id="recusa">
+    <p class="rotulo" data-surge>O que ele não faz</p>
+    <h2 class="titulo-medio" data-palavras>
+      A lista do que recusamos <em>diz mais</em> do que a lista do que fizemos.
+    </h2>
+
+    <ul class="recusas">
+      <li data-cartao>
+        <h3>Não fala com a internet</h3>
+        <p>
+          A versão publicada nem sequer pede permissão de rede ao Android. Não é
+          promessa: é impedimento técnico. Sem conta, sem servidor, sem nuvem.
+        </p>
+      </li>
+      <li data-cartao data-atraso="100">
+        <h3>Nem nós conseguimos ler</h3>
+        <p>
+          Os textos ficam num banco criptografado; as fotos e as gravações, uma a
+          uma. As chaves nascem no seu aparelho e nunca saem dele. Não há o que
+          entregar a ninguém, porque não há nada do nosso lado.
+        </p>
+      </li>
+      <li data-cartao data-atraso="200">
+        <h3>Nenhuma inteligência artificial fingindo ser quem morreu</h3>
+        <p>
+          Não existe aqui conversa simulada, voz clonada nem carta respondida.
+          Isso confunde o luto e atrasa a aceitação — e foi recusado desde o
+          primeiro dia.
+        </p>
+      </li>
+      <li data-cartao data-atraso="300">
+        <h3>Nunca cobra a sua presença</h3>
+        <p>
+          Sem notificação dizendo que faz três dias que você não escreve, sem
+          sequência a manter, sem contador. Ele fica em silêncio até você
+          precisar.
+        </p>
+      </li>
+      <li data-cartao data-atraso="400">
+        <h3>Não custa, e não vai passar a custar</h3>
+        <p>
+          Gratuito, sem compras dentro do aplicativo, sem versão paga e sem
+          anúncios. Nenhuma funcionalidade fica atrás de pagamento.
+        </p>
+      </li>
+      <li data-cartao data-atraso="500">
+        <h3>Não prende o que é seu</h3>
+        <p>
+          O backup gera um arquivo fechado por uma senha que só você sabe, para
+          guardar onde quiser e restaurar em outro celular. Nem esse arquivo
+          passa por nós.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5. Fecho -->
+  <section class="secao fecho">
+    <p class="assinatura" data-surge>Com todo meu amor…</p>
+    <p class="fecho-texto" data-surge data-atraso="200">
+      Em breve na Google Play. Enquanto isso, se você quiser acompanhar o
+      lançamento ou tirar alguma dúvida, escreva para
+      <a href="mailto:suportectma@generaltecnologia.com">suportectma@generaltecnologia.com</a>.
+    </p>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <p>
+    Um produto <a href="/">P&amp;C Tec</a> · Perdigão &amp; Carneiro Tecnologias LTDA<br />
+    CNPJ 68.508.547/0001-36 · Itabuna, Bahia · © 2026
+  </p>
+  <p class="rodape-links">
+    <a href="/comtodomeuamor/privacidade">Política de privacidade</a>
+  </p>
+</footer>
+
+<script src="/comtodomeuamor/pagina.js" defer></script>
+</body>
+</html>
