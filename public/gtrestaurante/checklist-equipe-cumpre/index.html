@@ -142,6 +142,55 @@
       });
     })();
   </script>
-  <!-- PIXEL DA META e GOOGLE TAG: entram aqui quando o dono conectar as contas de anúncio -->
+  <!-- Pixel da Meta: só carrega depois que a pessoa aceita os cookies (LGPD). Sem resposta ou com recusa, nada é enviado à Meta. -->
+  <div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <p>Com a sua permissão, usamos cookies da Meta para saber quais anúncios trouxeram você até aqui. Sem permissão, a página funciona igual.
+      <a href="/gtrestaurante/privacidade#cookies">Saiba mais</a></p>
+    <div class="cookies__botoes">
+      <button type="button" class="botao botao--peq" data-cookies="sim">Aceitar</button>
+      <button type="button" class="cookies__recusar" data-cookies="nao">Recusar</button>
+    </div>
+  </div>
+  <style>
+    .cookies { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; max-width: 720px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between;
+      background: var(--app); color: #fff; padding: 16px 20px; clip-path: var(--chanfro-16);
+      box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .6); font-size: 15px; }
+    .cookies[hidden] { display: none; }
+    .cookies p { margin: 0; flex: 1 1 320px; color: #d5dbe3; }
+    .cookies a { color: #fff; }
+    .cookies__botoes { display: flex; gap: 10px; align-items: center; }
+    .cookies__recusar { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, .4);
+      padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer; }
+    .cookies__recusar:hover { border-color: #fff; }
+  </style>
+  <script>
+    (function () {
+      var PIXEL = '1817342032752488', CHAVE = 'pc-cookies', caixa = document.getElementById('cookies');
+      function ler() { try { return localStorage.getItem(CHAVE); } catch (e) { return null; } }
+      function gravar(v) { try { localStorage.setItem(CHAVE, v); } catch (e) {} }
+      function pixel() {
+        !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+          s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', PIXEL);
+        fbq('track', 'PageView');
+        // clique no botão do teste grátis = interesse (Lead); o cadastro concluído é medido no próprio app
+        document.querySelectorAll('a.cadastro').forEach(function (a) {
+          a.addEventListener('click', function () { fbq('track', 'Lead'); });
+        });
+      }
+      var r = ler();
+      if (r === 'sim') pixel();
+      else if (r !== 'nao') caixa.hidden = false;
+      caixa.addEventListener('click', function (ev) {
+        var v = ev.target.getAttribute('data-cookies');
+        if (!v) return;
+        gravar(v);
+        caixa.hidden = true;
+        if (v === 'sim') pixel();
+      });
+    })();
+  </script>
 </body>
 </html>
