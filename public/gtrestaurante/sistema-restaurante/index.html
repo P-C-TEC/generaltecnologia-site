@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Estoque, caixa, CMV, cardápio e equipe num lugar só · GTRestaurante</title>
+  <meta name="description" content="Saia da planilha, do papel e do grupo de WhatsApp. Gestão completa para restaurante, bar, padaria e buffet, com IA de apoio. Teste 14 dias grátis, com todos os módulos e sem cartão." />
+  <meta name="theme-color" content="#F2F1F0" />
+  <link rel="canonical" href="https://pectecs.com.br/gtrestaurante/sistema-restaurante" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="GTRestaurante" />
+  <meta property="og:url" content="https://pectecs.com.br/gtrestaurante/sistema-restaurante" />
+  <meta property="og:title" content="Estoque, caixa, CMV, cardápio e equipe num lugar só" />
+  <meta property="og:description" content="Saia da planilha, do papel e do grupo de WhatsApp. Gestão completa para restaurante, bar, padaria e buffet, com IA de apoio. Teste 14 dias grátis, com todos os módulos e sem cartão." />
+  <meta property="og:image" content="https://pectecs.com.br/gtrestaurante/og-gtrestaurante.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/gtrestaurante/logo-gtr-64.png" />
+  <link rel="apple-touch-icon" href="/gtrestaurante/logo-gtr-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/gtrestaurante/gtr.css" />
+  <style>
+    /* Página de campanha: usa o estilo da página do produto (gtr.css) e só acrescenta os blocos dela. */
+    .lp { max-width: 1100px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+    .lp-hero { padding: clamp(48px, 8vw, 96px) 0 clamp(40px, 6vw, 72px); }
+    .lp-hero h1 { margin: 14px 0 18px; font-family: var(--display); font-weight: 700; font-size: clamp(34px, 5.4vw, 64px);
+      line-height: 1.04; max-width: 18ch; text-wrap: balance; }
+    .lp-hero .lp-sub { font-size: clamp(17px, 1.6vw, 20px); color: var(--corpo); max-width: 60ch; margin: 0 0 30px; }
+    .lp-nota { margin-top: 14px; color: var(--suave); font-size: 14px; }
+    .lp-prova { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; max-width: 860px; }
+    .lp-prova li { padding-left: 28px; position: relative; color: var(--corpo); }
+    .lp-prova li::before { content: ''; position: absolute; left: 0; top: 9px; width: 14px; height: 8px;
+      border-left: 2px solid var(--laranja-esc); border-bottom: 2px solid var(--laranja-esc); transform: rotate(-45deg); }
+    .lp-secao { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--linha); }
+    .lp-secao h2 { margin: 12px 0 28px; font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; }
+    .lp-escuro { background: var(--app); color: #fff; border-top: 0; }
+    .lp-escuro .kicker { color: var(--laranja-2); }
+    .lp-telas { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .lp-telas img { width: 100%; display: block; clip-path: var(--chanfro-16); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .6); }
+    .lp-escuro .lp-nota { color: #aab4c2; }
+    .lp-passos { counter-reset: p; display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; max-width: 860px; }
+    .lp-passos li { counter-increment: p; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; color: var(--corpo); }
+    .lp-passos li::before { content: counter(p, decimal-leading-zero); font-family: var(--display); font-weight: 700; color: var(--laranja-esc); font-size: 20px; }
+    .lp-cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .lp-card { background: #fff; padding: 22px; clip-path: var(--chanfro-16); }
+    .lp-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .lp-card p { margin: 0; color: var(--corpo); }
+    .lp-final { background: var(--app); color: #fff; }
+  </style>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="topo__in">
+      <a class="marca" href="/gtrestaurante" aria-label="GTRestaurante, início">
+        <img src="/gtrestaurante/logo-gtr-64.png" width="34" height="34" alt="" />
+        <span><b>GT</b>Restaurante</span>
+      </a>
+      <nav class="topo__menu" aria-label="Seções">
+        <a href="#por-dentro">Por dentro</a>
+        <a href="#como-comecar">Como começar</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="/gtrestaurante">Todos os módulos</a>
+      </nav>
+      <a class="botao botao--peq" href="https://gtrestaurante.generaltecnologia.com" rel="noopener">Entrar no app</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="lp lp-hero">
+      <p class="kicker">GTRestaurante</p>
+      <h1>Estoque, caixa, CMV, cardápio e equipe num lugar só</h1>
+      <p class="lp-sub">Saia da planilha, do papel e do grupo de WhatsApp. Gestão completa para restaurante, bar, padaria e buffet, com IA de apoio. Teste 14 dias grátis, com todos os módulos e sem cartão.</p>
+      <a class="botao cadastro" href="https://gtrestaurante.generaltecnologia.com?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gtr_sistema_restaurante" rel="noopener">Testar 14 dias grátis</a>
+      <p class="lp-nota">14 dias grátis, com todos os módulos e sem cartão de crédito.</p>
+    </section>
+
+    <section class="lp-secao"><div class="lp"><ul class="lp-prova"><li>13 módulos integrados que conversam entre si</li><li>14 dias de teste grátis, com todos os módulos e a IA incluída</li><li>0 cartões de crédito pedidos para testar</li><li>27 rotinas de checklist prontas por setor</li><li>30 tutoriais em vídeo, do cadastro ao fechamento do mês</li><li>Não precisa instalar nada: funciona no navegador do computador, do tablet ou do celular</li><li>Um produto P&amp;C Tec, Perdigão &amp; Carneiro Tecnologias LTDA, Itabuna/BA, CNPJ 68.508.547/0001-36</li></ul></div></section>
+
+    <section class="lp-secao lp-escuro" id="por-dentro">
+      <div class="lp">
+        <p class="kicker">Por dentro</p>
+        <h2>Veja como fica no app.</h2>
+        <div class="lp-telas"><img src='/gtrestaurante/telas/desk-painel-1440.webp' alt='Tela do GTRestaurante' loading='lazy'><img src='/gtrestaurante/telas/desk-estoque-1440.webp' alt='Tela do GTRestaurante' loading='lazy'><img src='/gtrestaurante/telas/desk-ficha-tecnica-1440.webp' alt='Tela do GTRestaurante' loading='lazy'></div>
+        <p class="lp-nota">Telas de um restaurante de demonstração, com dados fictícios.</p>
+      </div>
+    </section>
+
+    <section class="lp-secao" id="como-comecar">
+      <div class="lp">
+        <p class="kicker">Como começar</p>
+        <h2>Do cadastro ao primeiro resultado.</h2>
+        <ol class="lp-passos"><li>Crie a conta: nome, e-mail e senha. Sem cartão de crédito.</li><li>Configure em 3 passos: dados da casa, tipo de estabelecimento e setores. O app pré-configura o resto e você escolhe as rotinas prontas de abertura, operação e fechamento.</li><li>Cadastre insumos e equipe à mão, por planilha ou pela nota fiscal (XML da NF-e). Daí saem os alertas, o CMV e a escala. No 14º dia você decide o plano, e os dados do teste ficam preservados.</li></ol>
+      </div>
+    </section>
+
+    <section class="lp-secao"><div class="lp"><div class="lp-cards"><article class='lp-card'><h3>Saiba o que vai faltar antes do serviço</h3><p>Cada insumo ganha um mínimo de segurança calculado pelo uso diário. O app avisa o que vai faltar, importa a NF-e e monta o pedido de compra.</p></article><article class='lp-card'><h3>Custo, preço e margem de cada prato</h3><p>A ficha técnica usa os insumos do seu estoque. E o radar de preços avisa quando a última compra sai mais cara.</p></article><article class='lp-card'><h3>Caixa e CMV no mesmo lugar</h3><p>Fechamento de caixa conciliado por meio de pagamento, entradas e saídas por centro de custo, perdas registradas, CMV e DRE do mês. Importa o relatório do seu PDV e mostra o consumo teórico × real, insumo por insumo.</p></article><article class='lp-card'><h3>Equipe e rotina sob controle</h3><p>Escala da semana com turnos e folgas, presença conferida a cada turno e o painel mostrando quem faltou hoje. Checklist respondido pelo celular, com foto obrigatória onde importa.</p></article><article class='lp-card'><h3>IA que responde com os seus números</h3><p>Pergunte, por exemplo: &#x27;Quais insumos estão abaixo do mínimo?&#x27;. A IA resume, prioriza e gera relatórios por área. Ela é apoio: confira os números antes de decidir.</p></article></div></div></section>
+
+    <section class="perguntas" id="perguntas" aria-labelledby="t-perguntas">
+      <header class="secao-cab">
+        <p class="kicker">Perguntas frequentes</p>
+        <h2 id="t-perguntas">Antes de começar.</h2>
+      </header>
+      <div class="faq"><details><summary>Quanto custa?</summary><p>A assinatura é por restaurante, com módulos e número de usuários conforme o plano. Os valores estão em &#x27;Consultar planos&#x27;. Antes, você testa 14 dias com tudo liberado e sem cartão.</p></details><details><summary>Já uso um PDV. Preciso trocar?</summary><p>Não. O GTRestaurante importa o relatório de vendas do seu PDV e cruza com a ficha técnica para mostrar o consumo teórico × real e o CMV.</p></details><details><summary>Não tenho tempo para implantar e cadastrar tudo.</summary><p>A configuração é em 3 passos e o app pré-configura o resto. As 27 rotinas já vêm prontas, os insumos entram por planilha ou pela NF-e, e há 30 tutoriais curtos para cada etapa.</p></details><details><summary>Minha equipe não sabe mexer em sistema.</summary><p>O checklist é respondido pelo celular, no turno, item a item, sem instalar nada. E cada perfil só vê os módulos que você liberar.</p></details><details><summary>A IA pode errar e me fazer decidir errado?</summary><p>A IA é apoio. Ela resume, prioriza e explica com os números da sua casa, mas os resultados precisam ser conferidos. A decisão continua com quem gerencia o restaurante.</p></details><details><summary>E se eu não gostar? Perco o que cadastrei?</summary><p>Não pedimos cartão no teste. No fim dos 14 dias o acesso fica bloqueado até você escolher um plano, e os dados registrados continuam guardados. Na assinatura, você cancela quando quiser pelo portal de cobrança.</p></details><details><summary>Tenho mais de uma unidade. Serve?</summary><p>Serve. Para várias unidades, a implantação e o formato comercial são combinados com o time de vendas, em &#x27;Falar com vendas&#x27;.</p></details><details><summary>Meus dados ficam seguros?</summary><p>Há senha com verificação em duas etapas, perfis de acesso e trilha de auditoria de quem fez o quê. Os Termos de Uso e a Política de Privacidade estão publicados no site. Dúvidas sobre dados pessoais (LGPD): privacidadegtr@generaltecnologia.com.</p></details><details><summary>Preciso instalar alguma coisa?</summary><p>Não. Funciona no navegador do computador, do tablet ou do celular.</p></details></div>
+    </section>
+
+    <section class="final lp-final" aria-labelledby="t-final">
+      <h2 id="t-final">Abra o restaurante amanhã com tudo conferido. 14 dias grátis, com todos os módulos e sem cartão.</h2>
+      <p>14 dias grátis, com todos os módulos e sem cartão.</p>
+      <a class="botao cadastro" href="https://gtrestaurante.generaltecnologia.com?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gtr_sistema_restaurante" rel="noopener">Testar 14 dias grátis</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__in">
+      <div class="rodape__marca">
+        <img src="/gtrestaurante/logo-gtr-64.png" width="28" height="28" alt="" />
+        <span><b>GT</b>Restaurante</span>
+      </div>
+      <p>Um produto <a href="/">P&amp;C Tec</a> · © 2026 Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36</p>
+      <nav aria-label="Links do rodapé">
+        <a href="/gtrestaurante">GTRestaurante</a>
+        <a href="/gtrestaurante/termos">Termos</a>
+        <a href="/gtrestaurante/privacidade">Privacidade</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // repassa ao cadastro a origem (UTM) do anúncio que trouxe a pessoa até aqui
+    (function () {
+      var q = new URLSearchParams(location.search), u = {};
+      q.forEach(function (v, k) { if (k.indexOf('utm_') === 0 || k === 'fbclid' || k === 'gclid') u[k] = v; });
+      if (!Object.keys(u).length) return;
+      document.querySelectorAll('a.cadastro').forEach(function (a) {
+        var l = new URL(a.href);
+        Object.keys(u).forEach(function (k) { l.searchParams.set(k, u[k]); });
+        a.href = l.toString();
+      });
+    })();
+  </script>
+  <!-- PIXEL DA META e GOOGLE TAG: entram aqui quando o dono conectar as contas de anúncio -->
+</body>
+</html>
