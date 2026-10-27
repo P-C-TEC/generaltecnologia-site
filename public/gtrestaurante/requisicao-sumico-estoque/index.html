@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Cada insumo que sai do estoque fica registrado: quem pediu, quanto saiu e para qual setor. · GTRestaurante</title>
+  <meta name="description" content="Cozinha, bar e salão pedem o insumo pelo app. O estoque libera. Você compara a saída com o consumo e com a contagem, sem caderno e sem grupo de WhatsApp." />
+  <meta name="theme-color" content="#F2F1F0" />
+  <link rel="canonical" href="https://pectecs.com.br/gtrestaurante/requisicao-sumico-estoque" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="GTRestaurante" />
+  <meta property="og:url" content="https://pectecs.com.br/gtrestaurante/requisicao-sumico-estoque" />
+  <meta property="og:title" content="Cada insumo que sai do estoque fica registrado: quem pediu, quanto saiu e para qual setor." />
+  <meta property="og:description" content="Cozinha, bar e salão pedem o insumo pelo app. O estoque libera. Você compara a saída com o consumo e com a contagem, sem caderno e sem grupo de WhatsApp." />
+  <meta property="og:image" content="https://pectecs.com.br/gtrestaurante/og-gtrestaurante.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/gtrestaurante/logo-gtr-64.png" />
+  <link rel="apple-touch-icon" href="/gtrestaurante/logo-gtr-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/gtrestaurante/gtr.css" />
+  <style>
+    /* Página de campanha: usa o estilo da página do produto (gtr.css) e só acrescenta os blocos dela. */
+    .lp { max-width: 1100px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+    .lp-hero { padding: clamp(48px, 8vw, 96px) 0 clamp(40px, 6vw, 72px); }
+    .lp-hero h1 { margin: 14px 0 18px; font-family: var(--display); font-weight: 700; font-size: clamp(34px, 5.4vw, 64px);
+      line-height: 1.04; max-width: 18ch; text-wrap: balance; }
+    .lp-hero .lp-sub { font-size: clamp(17px, 1.6vw, 20px); color: var(--corpo); max-width: 60ch; margin: 0 0 30px; }
+    .lp-nota { margin-top: 14px; color: var(--suave); font-size: 14px; }
+    .lp-prova { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; max-width: 860px; }
+    .lp-prova li { padding-left: 28px; position: relative; color: var(--corpo); }
+    .lp-prova li::before { content: ''; position: absolute; left: 0; top: 9px; width: 14px; height: 8px;
+      border-left: 2px solid var(--laranja-esc); border-bottom: 2px solid var(--laranja-esc); transform: rotate(-45deg); }
+    .lp-secao { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--linha); }
+    .lp-secao h2 { margin: 12px 0 28px; font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; }
+    .lp-escuro { background: var(--app); color: #fff; border-top: 0; }
+    .lp-escuro .kicker { color: var(--laranja-2); }
+    .lp-telas { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .lp-telas img { width: 100%; display: block; clip-path: var(--chanfro-16); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .6); }
+    .lp-escuro .lp-nota { color: #aab4c2; }
+    .lp-passos { counter-reset: p; display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; max-width: 860px; }
+    .lp-passos li { counter-increment: p; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; color: var(--corpo); }
+    .lp-passos li::before { content: counter(p, decimal-leading-zero); font-family: var(--display); font-weight: 700; color: var(--laranja-esc); font-size: 20px; }
+    .lp-cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .lp-card { background: #fff; padding: 22px; clip-path: var(--chanfro-16); }
+    .lp-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .lp-card p { margin: 0; color: var(--corpo); }
+    .lp-final { background: var(--app); color: #fff; }
+  </style>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="topo__in">
+      <a class="marca" href="/gtrestaurante" aria-label="GTRestaurante, início">
+        <img src="/gtrestaurante/logo-gtr-64.png" width="34" height="34" alt="" />
+        <span><b>GT</b>Restaurante</span>
+      </a>
+      <nav class="topo__menu" aria-label="Seções">
+        <a href="#por-dentro">Por dentro</a>
+        <a href="#como-comecar">Como começar</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="/gtrestaurante">Todos os módulos</a>
+      </nav>
+      <a class="botao botao--peq" href="https://gtrestaurante.generaltecnologia.com" rel="noopener">Entrar no app</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="lp lp-hero">
+      <p class="kicker">GTRestaurante</p>
+      <h1>Cada insumo que sai do estoque fica registrado: quem pediu, quanto saiu e para qual setor.</h1>
+      <p class="lp-sub">Cozinha, bar e salão pedem o insumo pelo app. O estoque libera. Você compara a saída com o consumo e com a contagem, sem caderno e sem grupo de WhatsApp.</p>
+      <a class="botao cadastro" href="https://gtrestaurante.generaltecnologia.com?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gtr_requisicao_sumico_estoque" rel="noopener">Testar 14 dias grátis</a>
+      <p class="lp-nota">14 dias grátis, com todos os módulos e sem cartão de crédito.</p>
+    </section>
+
+    <section class="lp-secao"><div class="lp"><ul class="lp-prova"><li>Requisições diárias dos setores dentro do módulo Estoque e compras</li><li>Inventário (contagem) e movimentações do estoque no mesmo lugar</li><li>Consumo teórico × real, insumo por insumo, a partir do relatório de vendas do seu PDV</li><li>Trilha de auditoria: quem fez o quê no sistema</li><li>14 dias grátis, com todos os módulos e sem cartão de crédito</li><li>Funciona no navegador do celular, do tablet ou do computador, sem instalar nada</li></ul></div></section>
+
+    <section class="lp-secao lp-escuro" id="por-dentro">
+      <div class="lp">
+        <p class="kicker">Por dentro</p>
+        <h2>Veja como fica no app.</h2>
+        <div class="lp-telas"><img src='/gtrestaurante/telas/desk-requisicao.webp' alt='Tela do GTRestaurante' loading='lazy'><img src='/gtrestaurante/telas/desk-requisicao-lista.webp' alt='Tela do GTRestaurante' loading='lazy'><img src='/gtrestaurante/telas/desk-estoque-1440.webp' alt='Tela do GTRestaurante' loading='lazy'></div>
+        <p class="lp-nota">Telas de um restaurante de demonstração, com dados fictícios.</p>
+      </div>
+    </section>
+
+    <section class="lp-secao" id="como-comecar">
+      <div class="lp">
+        <p class="kicker">Como começar</p>
+        <h2>Do cadastro ao primeiro resultado.</h2>
+        <ol class="lp-passos"><li>Crie a conta com nome, e-mail e senha, sem cartão. Configure a casa e os setores em 3 passos.</li><li>Cadastre os insumos à mão ou por planilha. Dê entrada pela nota fiscal (XML da NF-e).</li><li>Cada setor faz a requisição pelo celular, o estoque libera e a saída fica registrada para você conferir na contagem.</li></ol>
+      </div>
+    </section>
+
+    <section class="lp-secao"><div class="lp"><div class="lp-cards"><article class='lp-card'><h3>Saída com nome e quantidade</h3><p>Cada requisição mostra o setor, quem pediu e quanto saiu. A conversa deixa de ser &quot;quem pegou?&quot; e passa a ser &quot;está registrado&quot;.</p></article><article class='lp-card'><h3>Contagem com histórico</h3><p>No inventário, você vê as movimentações do período. A diferença deixa de ser um mistério: você sabe onde procurar.</p></article><article class='lp-card'><h3>O que vendeu × o que saiu</h3><p>Importe o relatório de vendas do PDV e compare o consumo teórico com o real, insumo por insumo.</p></article><article class='lp-card'><h3>CMV com base no estoque</h3><p>A ficha técnica usa os insumos do estoque para calcular custo e margem de cada prato. No fechamento do mês, você vê o CMV e o DRE.</p></article><article class='lp-card'><h3>Cada pessoa vê só o que precisa</h3><p>O estabelecimento define quais módulos cada perfil pode ver e usar. O bar faz a requisição dele; a gestão vê o todo.</p></article></div></div></section>
+
+    <section class="perguntas" id="perguntas" aria-labelledby="t-perguntas">
+      <header class="secao-cab">
+        <p class="kicker">Perguntas frequentes</p>
+        <h2 id="t-perguntas">Antes de começar.</h2>
+      </header>
+      <div class="faq"><details><summary>Minha equipe não vai parar o serviço para pedir insumo no sistema.</summary><p>O app roda no celular, pelo navegador, sem instalar nada. Cada pessoa só vê os módulos que o perfil dela permite. Dá para testar com um setor nos 14 dias antes de decidir.</p></details><details><summary>Cadastrar todos os insumos dá muito trabalho?</summary><p>Os insumos podem ser cadastrados à mão ou por planilha. A entrada pode vir direto do XML da nota fiscal.</p></details><details><summary>Já tenho PDV. Ele já não controla isso?</summary><p>O PDV registra a venda. O GTRestaurante importa o relatório de vendas do PDV e compara o consumo teórico com o real, insumo por insumo. A requisição registra a saída do estoque para os setores, que é a parte que o PDV não mostra.</p></details><details><summary>Quanto custa?</summary><p>O teste é grátis por 14 dias, sem cartão. Os planos são por restaurante, com módulos e número de usuários conforme o plano. Os valores são informados pelo time comercial. Para mais de uma unidade, o formato é combinado com vendas.</p></details><details><summary>E se eu não gostar? Perco o que lancei?</summary><p>Não. No fim do teste o acesso fica bloqueado até você escolher um plano, e os dados continuam guardados. Na assinatura, você cancela quando quiser pelo portal de cobrança.</p></details><details><summary>A IA vai descobrir sozinha onde está o desvio?</summary><p>Não. A IA resume, prioriza e explica com os números da sua casa, mas é apoio. Os resultados precisam ser conferidos, e a decisão continua com quem gerencia.</p></details><details><summary>E os meus dados?</summary><p>O uso dos dados segue os Termos de Uso e a Política de Privacidade do GTRestaurante. Dúvidas sobre dados pessoais: privacidadegtr@generaltecnologia.com.</p></details></div>
+    </section>
+
+    <section class="final lp-final" aria-labelledby="t-final">
+      <h2 id="t-final">Faça a próxima contagem com cada saída registrada. 14 dias grátis, com todos os módulos e sem cartão.</h2>
+      <p>14 dias grátis, com todos os módulos e sem cartão.</p>
+      <a class="botao cadastro" href="https://gtrestaurante.generaltecnologia.com?utm_source=site&amp;utm_medium=landing&amp;utm_campaign=gtr_requisicao_sumico_estoque" rel="noopener">Testar 14 dias grátis</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__in">
+      <div class="rodape__marca">
+        <img src="/gtrestaurante/logo-gtr-64.png" width="28" height="28" alt="" />
+        <span><b>GT</b>Restaurante</span>
+      </div>
+      <p>Um produto <a href="/">P&amp;C Tec</a> · © 2026 Perdigão &amp; Carneiro Tecnologias LTDA · CNPJ 68.508.547/0001-36</p>
+      <nav aria-label="Links do rodapé">
+        <a href="/gtrestaurante">GTRestaurante</a>
+        <a href="/gtrestaurante/termos">Termos</a>
+        <a href="/gtrestaurante/privacidade">Privacidade</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // repassa ao cadastro a origem (UTM) do anúncio que trouxe a pessoa até aqui
+    (function () {
+      var q = new URLSearchParams(location.search), u = {};
+      q.forEach(function (v, k) { if (k.indexOf('utm_') === 0 || k === 'fbclid' || k === 'gclid') u[k] = v; });
+      if (!Object.keys(u).length) return;
+      document.querySelectorAll('a.cadastro').forEach(function (a) {
+        var l = new URL(a.href);
+        Object.keys(u).forEach(function (k) { l.searchParams.set(k, u[k]); });
+        a.href = l.toString();
+      });
+    })();
+  </script>
+  <!-- PIXEL DA META e GOOGLE TAG: entram aqui quando o dono conectar as contas de anúncio -->
+</body>
+</html>
