@@ -22,7 +22,7 @@ const ctx = await chromium.launchPersistentContext(PERFIL, {
   bypassCSP: true, // para injetar popular-demo.js
 })
 const pagina = ctx.pages()[0] ?? (await ctx.newPage())
-await pagina.goto('https://gtrestaurante.generaltecnologia.com', { waitUntil: 'networkidle' })
+await pagina.goto('https://gtrestaurante.app', { waitUntil: 'networkidle' })
 
 const espera = (ms) => pagina.waitForTimeout(ms)
 const logado = () =>

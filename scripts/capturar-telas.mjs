@@ -10,7 +10,7 @@ await mkdir(SAIDA, { recursive: true })
 
 const ALVOS = [
   { nome: 'gtrestaurante', url: 'https://pectecs.com.br/gtrestaurante' },
-  { nome: 'gtrestaurante-app', url: 'https://gtrestaurante.generaltecnologia.com' },
+  { nome: 'gtrestaurante-app', url: 'https://gtrestaurante.app' },
   { nome: 'mordomo', url: 'https://mordomotec.com.br' },
   { nome: 'plantemo', url: 'https://pectecs.com.br/plantemo' },
   { nome: 'plantemo-site', url: 'https://plantemo.vercel.app' },

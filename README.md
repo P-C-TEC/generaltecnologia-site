@@ -3,8 +3,8 @@
 Site institucional da **Perdigão & Carneiro Tecnologias LTDA** (marca P&C Tec), publicado em
 `pectecs.com.br` pela Vercel (projeto `general-tecnologia/generaltecnologia-landing`). Todo push na
 `main` vira deploy de produção; os outros ramos geram prévias. `generaltecnologia.com` e `www`
-redirecionam para `pectecs.com.br` (308). O subdomínio `gtrestaurante.generaltecnologia.com` não
-muda: é onde o produto roda.
+redirecionam para `pectecs.com.br` (308). O produto roda em `gtrestaurante.app`; desde 18/11/2026 o
+endereço antigo `gtrestaurante.generaltecnologia.com` só redireciona para ele.
 
 A home é um app React + Vite + Framer Motion, com CSS próprio em `src/b/`: fundo claro, fonte
 Quantico nos títulos, títulos em escada, a logo registrada animada na hero e os produtos em rolagem

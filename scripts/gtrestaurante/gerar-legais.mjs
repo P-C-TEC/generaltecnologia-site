@@ -1,7 +1,7 @@
 /**
  * Gera /gtrestaurante/termos e /gtrestaurante/privacidade a partir do Markdown em fonte/.
  *
- * A fonte dos textos é o próprio app (gtrestaurante.generaltecnologia.com/?legal=terms e
+ * A fonte dos textos é o próprio app (gtrestaurante.app/?legal=terms e
  * ?legal=privacy, versão de 16/09/2026), copiada para fonte/ com os e-mails de contato do
  * GTRestaurante. Quando o app mudar os documentos, atualize os .md e rode de novo:
  *
@@ -84,7 +84,7 @@ function pagina({ arquivo, caminho, descricao, outro }) {
         <a href="/gtrestaurante">Página do produto</a>
         <a href="${outro.caminho}">${outro.nome}</a>
       </nav>
-      <a class="botao botao--peq" href="https://gtrestaurante.generaltecnologia.com" rel="noopener">Entrar no app</a>
+      <a class="botao botao--peq" href="https://gtrestaurante.app" rel="noopener">Entrar no app</a>
     </div>
   </header>
 
