@@ -49,7 +49,7 @@ await sharp(faixa)
   .toFile(`${DESTINO}/og-gtrestaurante.jpg`)
 
 // Ícones a partir da logo do app (antes vinha do subdomínio do app, bloqueado pela CSP do site).
-const resposta = await fetch('https://gtrestaurante.generaltecnologia.com/brand/logo-gtr.png')
+const resposta = await fetch('https://gtrestaurante.app/brand/logo-gtr.png')
 const logo = Buffer.from(await resposta.arrayBuffer())
 await writeFile('capturas/logo-gtr-original.png', logo)
 for (const lado of [64, 180]) {
