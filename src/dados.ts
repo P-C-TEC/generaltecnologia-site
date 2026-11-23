@@ -87,4 +87,13 @@ export const PRODUTOS: Produto[] = [
     imagens: [tela('ctma-site-desk-2'), tela('ctma-site-desk-3'), tela('ctma-site-cel-1')],
     cor: '#D4AF37',
   },
+  {
+    nome: 'Cara de Pau',
+    status: 'Em breve',
+    resumo:
+      'Jogo de cartas de blefe para jogar com a família e os amigos: mesa 3D, câmera e voz na mesa e quatro temas. Em breve para iPhone, Android e computador.',
+    href: '/caradepau',
+    imagens: [tela('caradepau-desk-1'), tela('caradepau-desk-2'), tela('caradepau-cel-1')],
+    cor: '#E3B862',
+  },
 ]
