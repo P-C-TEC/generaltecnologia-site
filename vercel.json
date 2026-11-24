@@ -54,7 +54,6 @@
       ]
     },
     {
-      "_comentario": "As paginas do Com todo meu amor nao carregam nada de fora: fontes, estilo e script saem todos deste dominio. Por isso o default-src aqui e 'none' em vez de 'self', e o style-src dispensa o 'unsafe-inline' -- nenhuma das duas paginas tem estilo embutido, e o pagina.js so escreve em propriedades de style, o que a CSP permite. Numa pagina que explica um aplicativo sem internet, a propria pagina nao deveria pedir nada a terceiros.",
       "source": "/comtodomeuamor(.*)",
       "headers": [
         {

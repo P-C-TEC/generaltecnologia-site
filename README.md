@@ -155,3 +155,30 @@ relatório estruturado" que o app mostra no painel).
 **Termos e privacidade** vêm do próprio app (`?legal=terms` e `?legal=privacy`), copiados para
 `scripts/gtrestaurante/fonte/` com os e-mails do GTRestaurante (`suportegtrestaurante@` e
 `privacidadegtr@generaltecnologia.com`). Para atualizar, edite os `.md` e rode `gerar-legais.mjs`.
+
+## Por que o `/comtodomeuamor` tem regra de cabeçalho própria
+
+O `vercel.json` não aceita comentário, então a explicação fica aqui.
+
+Aquelas páginas explicam um aplicativo cuja frase central é *"nada sai do seu
+aparelho"*. Enquanto elas buscavam Inter e Lora em `fonts.googleapis.com`, quem
+abria a política de privacidade para conferir se podia confiar entregava o
+próprio IP e o próprio navegador ao Google — antes mesmo de instalar qualquer
+coisa. Não era vazamento de dado de usuário do aplicativo; era incoerência, bem
+no lugar onde a pessoa foi verificar a promessa.
+
+As fontes passaram a sair deste domínio (`/comtodomeuamor/fontes/`, os mesmos
+arquivos que o aplicativo embarca, recortados para o português e em WOFF2), e a
+CSP daquele caminho ficou mais apertada que a do resto do site:
+
+- `default-src 'none'` em vez de `'self'`;
+- sem as liberações para `fonts.googleapis.com` e `fonts.gstatic.com`;
+- **sem `'unsafe-inline'` no `style-src`** — nenhuma das duas páginas tem estilo
+  embutido, e o `pagina.js` só escreve em propriedades de `style`, o que a CSP
+  permite.
+
+Se alguém algum dia acrescentar um `<style>`, um `style="..."` ou um script
+inline nessas páginas, elas vão quebrar — e é esse o ponto: quebrar alto em vez
+de afrouxar a regra em silêncio.
+
+As regras do `/plantemo` são separadas e não foram tocadas.
