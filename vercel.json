@@ -21,7 +21,7 @@
       ]
     },
     {
-      "source": "/((?!plantemo).*)",
+      "source": "/((?!plantemo|comtodomeuamor).*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -45,6 +45,44 @@
         },
         {
           "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        }
+      ]
+    },
+    {
+      "_comentario": "As paginas do Com todo meu amor nao carregam nada de fora: fontes, estilo e script saem todos deste dominio. Por isso o default-src aqui e 'none' em vez de 'self', e o style-src dispensa o 'unsafe-inline' -- nenhuma das duas paginas tem estilo embutido, e o pagina.js so escreve em propriedades de style, o que a CSP permite. Numa pagina que explica um aplicativo sem internet, a propria pagina nao deveria pedir nada a terceiros.",
+      "source": "/comtodomeuamor(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
           "value": "same-origin"
         },
         {
