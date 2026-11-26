@@ -1,0 +1,55 @@
+/*
+  As fontes servidas daqui, e não do Google.
+  ---------------------------------------------------------------------------
+  Estas páginas explicam um aplicativo cuja frase central é "nada sai do seu
+  aparelho". Enquanto elas buscavam Inter e Lora em fonts.googleapis.com, quem
+  abria a política de privacidade para conferir se podia confiar entregava o
+  próprio IP e o próprio navegador ao Google -- antes mesmo de instalar
+  qualquer coisa. Era uma incoerência bem no lugar onde a pessoa foi verificar
+  a promessa.
+
+  Os arquivos são os mesmos que o aplicativo já embarca, recortados para os
+  caracteres do português e convertidos para WOFF2: 1063 KB de TTF viraram
+  295 KB, e nenhuma requisição sai deste domínio.
+
+  São fontes variáveis -- um arquivo cobre toda a faixa de peso. Por isso o
+  `font-weight` abaixo é um intervalo, e não um número: o navegador interpola
+  o peso que o CSS pedir dentro dele.
+
+  Licença: SIL Open Font License 1.1, nos arquivos OFL-inter.txt e
+  OFL-lora.txt, nesta mesma pasta.
+*/
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  /* O texto aparece na hora, com a fonte do sistema, e troca quando a nossa
+     chegar. Ninguém fica olhando para uma tela em branco por causa de letra. */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Italic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('Lora.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('Lora-Italic.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
