@@ -56,9 +56,9 @@ Nenhuma prévia pode ir parar no Google, e o domínio oficial precisa aparecer:
 
 Todo botão de contato abre um formulário (nome, telefone, e-mail, assunto opcional e "descreva o
 que você precisa"). O envio vai para `api/contato.ts`, que manda a mensagem pela conta Google
-Workspace da empresa para `vendaspectec@generaltecnologia.com`. O "responder" do e-mail recebido vai
+Workspace da empresa para `vendas@pectecs.com.br`. O "responder" do e-mail recebido vai
 direto para quem escreveu, e o e-mail traz um link para responder pelo WhatsApp. O e-mail mostrado
-no site é `contatopectec@generaltecnologia.com`.
+no site é `contato@pectecs.com.br`.
 
 Para funcionar, o projeto da Vercel precisa das variáveis (Settings → Environment Variables, em
 Production e Preview):
@@ -153,8 +153,8 @@ Depois, `otimizar-telas.mjs` gera os WebP (cortando a barra de rolagem e o aviso
 relatório estruturado" que o app mostra no painel).
 
 **Termos e privacidade** vêm do próprio app (`?legal=terms` e `?legal=privacy`), copiados para
-`scripts/gtrestaurante/fonte/` com os e-mails do GTRestaurante (`suportegtrestaurante@` e
-`privacidadegtr@generaltecnologia.com`). Para atualizar, edite os `.md` e rode `gerar-legais.mjs`.
+`scripts/gtrestaurante/fonte/` com os e-mails do GTRestaurante (`gtrestaurante@pectecs.com.br` e
+`privacidade@pectecs.com.br`). Para atualizar, edite os `.md` e rode `gerar-legais.mjs`.
 
 ## Por que o `/comtodomeuamor` tem regra de cabeçalho própria
 

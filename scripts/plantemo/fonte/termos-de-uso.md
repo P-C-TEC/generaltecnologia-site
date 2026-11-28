@@ -185,5 +185,5 @@ respondemos.
 **PERDIGÃO & CARNEIRO TECNOLOGIAS LTDA** — CNPJ 68.508.547/0001-36
 Itabuna, Bahia, Brasil
 
-- Assuntos gerais: **contato@generaltecnologia.com**
-- Privacidade e dados pessoais: **privacidadeplantemo@generaltecnologia.com**
+- Assuntos gerais: **plantemo@pectecs.com.br**
+- Privacidade e dados pessoais: **privacidade@pectecs.com.br**

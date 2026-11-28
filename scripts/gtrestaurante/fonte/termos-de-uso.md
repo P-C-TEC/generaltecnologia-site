@@ -59,7 +59,7 @@ Os relatórios, o assistente e a leitura de comprovantes com inteligência artif
 
 ## 11. Disponibilidade e suporte
 
-Empregamos esforços razoáveis para manter o sistema disponível e seguro, mas ele pode ficar indisponível por manutenção, falhas de fornecedores ou de conexão. O suporte é prestado pelo canal de chamados dentro do aplicativo e pelo e-mail suportegtrestaurante@generaltecnologia.com.
+Empregamos esforços razoáveis para manter o sistema disponível e seguro, mas ele pode ficar indisponível por manutenção, falhas de fornecedores ou de conexão. O suporte é prestado pelo canal de chamados dentro do aplicativo e pelo e-mail gtrestaurante@pectecs.com.br.
 
 ## 12. Propriedade intelectual e dos dados
 
@@ -79,4 +79,4 @@ Estes Termos são regidos pelas leis do Brasil. Fica eleito o foro da comarca de
 
 ## 16. Contato
 
-Suporte: suportegtrestaurante@generaltecnologia.com. Privacidade: privacidadegtr@generaltecnologia.com.
+Suporte: gtrestaurante@pectecs.com.br. Privacidade: privacidade@pectecs.com.br.
