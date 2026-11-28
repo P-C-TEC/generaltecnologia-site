@@ -4,14 +4,14 @@
 // serviço extra para contratar. Variáveis de ambiente, configuradas pelo dono na Vercel:
 //   SMTP_USER      conta Google que envia (ex.: vendaspectec@generaltecnologia.com)
 //   SMTP_PASS      "senha de app" dessa conta, gerada em myaccount.google.com/apppasswords
-//   CONTATO_PARA   quem recebe (opcional; padrão: vendaspectec@generaltecnologia.com)
+//   CONTATO_PARA   quem recebe (opcional; padrão: vendas@pectecs.com.br)
 // Sem SMTP_USER/SMTP_PASS a função responde 503 e o site mostra o e-mail para contato direto.
 // Em desenvolvimento local (CONTATO_MODO_TESTE=1) a mensagem só aparece no terminal.
 import nodemailer from 'nodemailer'
 import { conferirSolucao } from './_desafio.js'
 import { limpar, validar, type Dados } from './_formulario.js'
 
-const PARA_PADRAO = 'vendaspectec@generaltecnologia.com'
+const PARA_PADRAO = 'vendas@pectecs.com.br'
 
 // Proteção simples contra rajadas: no máximo 5 envios por IP a cada 10 minutos. Vale por
 // instância da função (a Vercel pode abrir várias), então segura abuso casual, não um ataque

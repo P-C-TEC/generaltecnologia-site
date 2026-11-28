@@ -12,7 +12,7 @@ Esta política explica como tratamos dados pessoais de três públicos:
 - os colaboradores que o estabelecimento registra no sistema (equipe, escala, presença);
 - os clientes do estabelecimento que fazem uma reserva, deixam uma avaliação, respondem uma pesquisa, recebem um orçamento ou pedem para exercer seus direitos pelos links públicos do estabelecimento.
 
-Encarregado pelo tratamento de dados pessoais: Eigon Oliveira Perdigão da Silva — privacidadegtr@generaltecnologia.com.
+Encarregado pelo tratamento de dados pessoais: Eigon Oliveira Perdigão da Silva — privacidade@pectecs.com.br.
 
 ## 2. Quem decide sobre cada dado
 
@@ -81,7 +81,7 @@ Não usamos cookies de publicidade nem de rastreamento. A sessão de login é ma
 
 - Enquanto a conta existe — em teste ou com assinatura —, os dados são mantidos para a prestação do serviço.
 - Quando o teste termina sem assinatura, ou quando a assinatura é suspensa ou cancelada, o acesso ao sistema é bloqueado e os dados são preservados, para que tudo volte como estava se o estabelecimento assinar.
-- O estabelecimento pode pedir a exclusão definitiva dos dados da conta pelo e-mail privacidadegtr@generaltecnologia.com. Mantemos apenas o que a lei nos obriga a guardar, como registros fiscais, pelo prazo legal.
+- O estabelecimento pode pedir a exclusão definitiva dos dados da conta pelo e-mail privacidade@pectecs.com.br. Mantemos apenas o que a lei nos obriga a guardar, como registros fiscais, pelo prazo legal.
 - Os pedidos de exclusão ou anonimização feitos por clientes do estabelecimento são executados pelo próprio estabelecimento no sistema. O registro de cada pedido é mantido como comprovação do atendimento.
 - Os PDFs de orçamento enviados por link são apagados depois que o link expira, e as fotos do cardápio que ficaram sem uso — de seção e de prato — são apagadas periodicamente.
 - Registros técnicos e de erro são mantidos pelo tempo necessário para segurança e diagnóstico.
@@ -96,7 +96,7 @@ Em caso de incidente de segurança que possa causar risco ou dano relevante, com
 
 Você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade, informação sobre com quem compartilhamos, informação sobre a possibilidade de não consentir e revogação do consentimento (art. 18 da LGPD).
 
-Pessoas usuárias e estabelecimentos: escreva para privacidadegtr@generaltecnologia.com. Clientes de um restaurante: use o formulário de privacidade do próprio restaurante ou escreva para o mesmo e-mail, que encaminhamos. Respondemos em até 15 dias.
+Pessoas usuárias e estabelecimentos: escreva para privacidade@pectecs.com.br. Clientes de um restaurante: use o formulário de privacidade do próprio restaurante ou escreva para o mesmo e-mail, que encaminhamos. Respondemos em até 15 dias.
 
 Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).
 
@@ -106,4 +106,4 @@ Quando alterarmos esta política de forma relevante, avisaremos no aplicativo. A
 
 ## 13. Contato
 
-Encarregado pelo tratamento de dados: Eigon Oliveira Perdigão da Silva — privacidadegtr@generaltecnologia.com.
+Encarregado pelo tratamento de dados: Eigon Oliveira Perdigão da Silva — privacidade@pectecs.com.br.

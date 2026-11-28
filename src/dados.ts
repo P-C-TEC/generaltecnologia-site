@@ -2,8 +2,8 @@
 // as imagens são capturas das páginas públicas de cada produto (scripts/capturar-telas.mjs).
 
 // E-mail mostrado no site para contato direto. As mensagens do formulário vão para
-// vendaspectec@ (ver api/contato.ts).
-export const EMAIL_CONTATO = 'contatopectec@generaltecnologia.com'
+// vendas@pectecs.com.br (ver api/contato.ts).
+export const EMAIL_CONTATO = 'contato@pectecs.com.br'
 
 const tela = (nome: string) => `/telas/${nome}.webp`
 
