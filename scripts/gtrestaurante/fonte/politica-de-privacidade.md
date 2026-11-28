@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-Última atualização: 16 de setembro de 2026
+Última atualização: 27 de outubro de 2026
 
 ## 1. Quem somos e a quem esta política se aplica
 
@@ -41,7 +41,9 @@ Se você é cliente de um restaurante que usa o GTRestaurante, quem responde pel
 - **Avisar clientes do estabelecimento, por WhatsApp, sobre o andamento de pedidos e orçamentos**, quando o estabelecimento ativa essa função: execução do pedido feito pelo cliente.
 - **Gerar relatórios, responder no assistente e ler comprovantes por foto com inteligência artificial:** execução do serviço contratado, conforme a seção 5.
 
-Não usamos dados pessoais para publicidade, não vendemos dados e não criamos perfis de clientes dos estabelecimentos para fins próprios.
+- **Medir os anúncios do GTRestaurante nas páginas de campanha** (como pectecs.com.br/gtrestaurante/cmv-fecha-mes), somente se a pessoa aceitar os cookies no aviso da página: consentimento (art. 7º, I). Veja a seção 8.
+
+Os dados do aplicativo não são usados para publicidade. Não vendemos dados e não criamos perfis de clientes dos estabelecimentos para fins próprios.
 
 ## 5. Inteligência artificial
 
@@ -64,6 +66,7 @@ Contamos com fornecedores que tratam dados em nosso nome, cada um apenas para a 
 - **Sentry** — monitoramento de erros do aplicativo, quando ativado.
 - **Google Fonts** — as fontes do aplicativo são carregadas dos servidores do Google, que recebem o endereço IP de quem acessa.
 - **Serviços de notificação dos navegadores** (como Google, Apple e Mozilla) — entregam as notificações do aplicativo a quem as ativa.
+- **Meta (Facebook e Instagram)** — mede os resultados dos nossos anúncios nas páginas de campanha, apenas para quem aceita os cookies, conforme a seção 8.
 
 Também podemos compartilhar dados com autoridades públicas quando houver obrigação legal ou ordem judicial.
 
@@ -75,7 +78,13 @@ Parte desses fornecedores armazena ou processa dados fora do Brasil, principalme
 
 Para abrir rápido e continuar funcionando com a conexão instável, o aplicativo guarda no navegador uma cópia de trabalho dos dados que a pessoa usuária pode ver. Ao sair da conta, essas cópias são apagadas do aparelho; ficam guardadas apenas as alterações que ainda não foram enviadas ao servidor, até que sejam enviadas.
 
-Não usamos cookies de publicidade nem de rastreamento. A sessão de login é mantida no armazenamento do próprio navegador.
+O aplicativo não usa cookies de publicidade nem de rastreamento. A sessão de login é mantida no armazenamento do próprio navegador.
+
+### Cookies nas páginas de campanha {#cookies}
+
+As páginas de campanha do GTRestaurante, para onde levam os nossos anúncios, mostram um aviso com as opções **Aceitar** e **Recusar**. Só se a pessoa aceitar, a página carrega o Pixel da Meta, que grava cookies no navegador e envia à Meta dados técnicos da visita (como endereço IP, navegador, página vista, o anúncio de origem e o clique no botão do teste grátis). Usamos isso apenas para saber quais anúncios trazem interessados e para mostrar os anúncios a quem tem mais chance de se interessar. A Meta trata esses dados também conforme a política de privacidade dela.
+
+Quem recusa, ou não responde, usa a página normalmente e nada é enviado à Meta. A escolha fica guardada no navegador; para mudar de ideia, basta limpar os dados do site no navegador, e o aviso aparece de novo. Também é possível pedir a eliminação dos dados pelos canais da seção 13.
 
 ## 9. Por quanto tempo guardamos os dados
 

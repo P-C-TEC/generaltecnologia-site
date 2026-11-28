@@ -7,7 +7,8 @@
  *
  *   node scripts/gtrestaurante/gerar-legais.mjs   (grava em public/gtrestaurante/)
  *
- * O conversor cobre só o que estes documentos usam: título, parágrafo, lista e negrito.
+ * O conversor cobre só o que estes documentos usam: título, subtítulo com âncora ({#id}),
+ * parágrafo, lista e negrito.
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -37,7 +38,11 @@ function converter(md) {
     if (!linha.trim()) continue
     if (h) {
       if (h[1] === '#') titulo = h[2]
-      else saida.push(`<h2>${inline(h[2])}</h2>`)
+      else if (h[1] === '###') {
+        // "### Título {#ancora}" vira <h3 id="ancora">; os avisos de cookies apontam para #cookies
+        const [, texto, id] = h[2].match(/^(.*?)(?:\s*\{#([\w-]+)\})?$/)
+        saida.push(`<h3${id ? ` id="${id}"` : ''}>${inline(texto)}</h3>`)
+      } else saida.push(`<h2>${inline(h[2])}</h2>`)
     } else if (/^Última atualização:/.test(linha)) {
       data = linha.replace('Última atualização:', '').trim()
     } else if (/^- /.test(linha)) {
